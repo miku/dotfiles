@@ -45,6 +45,10 @@ install webkit2png
 install zopfli
 install p7zip
 
+# More useful things
+install vcprompt
+install bash-completion
+
 tap homebrew/versions
 install lua52
 
