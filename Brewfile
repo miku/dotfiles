@@ -45,9 +45,16 @@ install webkit2png
 install zopfli
 install p7zip
 
+# Additional Stuff
+# install mysql
+
 # More useful things
 install vcprompt
 install bash-completion
+install youtube-dl
+install ffmpeg
+install tmux
+install git-extras
 
 tap homebrew/versions
 install lua52
