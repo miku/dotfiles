@@ -60,6 +60,7 @@ install lua52
 # Additional Stuff
 # install mysql
 # install elasticsearch
+# install lftp
 
 
 # Remove outdated versions from the cellar
