@@ -40,3 +40,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Homebrew version ofbash completion
 [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
+# rupa/z
+[ -f "$HOME/Code/rupa/z/z.sh" ] && source "$HOME/Code/rupa/z/z.sh"
