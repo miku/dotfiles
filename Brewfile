@@ -45,19 +45,22 @@ install webkit2png
 install zopfli
 install p7zip
 
-# Additional Stuff
-# install mysql
-
 # More useful things
-install vcprompt
 install bash-completion
-install youtube-dl
 install ffmpeg
-install tmux
 install git-extras
+install sshuttle
+install tmux
+install vcprompt
+install youtube-dl
 
 tap homebrew/versions
 install lua52
+
+# Additional Stuff
+# install mysql
+# install elasticsearch
+
 
 # Remove outdated versions from the cellar
 cleanup
