@@ -41,6 +41,13 @@
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+	# Glance at history
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	# Commiter charts
+	charts = shortlog -sn
+	# Todos
+	todo = grep --heading --break --ignore-case -e ' FIX: *' -e ' TODO: *'
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
