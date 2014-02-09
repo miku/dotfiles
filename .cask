@@ -24,6 +24,7 @@ installcask mou
 installcask pandoc
 installcask quicksilver
 installcask seashore
+installcask skype
 installcask sublime-text
 installcask the-unarchiver
 installcask tor-browser
