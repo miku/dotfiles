@@ -43,3 +43,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # rupa/z
 [ -f "$HOME/Code/rupa/z/z.sh" ] && source "$HOME/Code/rupa/z/z.sh"
+
+# rbenv
+[ -d "$HOME/.rbenv" ] && eval "$(rbenv init -)"
