@@ -43,5 +43,5 @@ export WHITE
 export BOLD
 export RESET
 
-export PS1="\u@\h:\w $ORANGE\$(vcprompt -f '[%n:%b%u%m] ')$RESET\$ "
+export PS1="\u@\h:\w \[$ORANGE\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
 
