@@ -156,3 +156,7 @@ command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.e
 
 # Use some math functions
 alias bc='bc -l'
+
+# Elasticsearch 1+
+alias indexcat='curl -sL localhost:9200/_cat/indices|sort -nrk5'
+
