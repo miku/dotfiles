@@ -79,3 +79,14 @@ function estop() {
     while true; do escat "$@"; sleep 2; clear; done
 }
 
+# strip unnecessary whitespace from file
+function stripspace() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: stripspace FILE"
+    else
+        local tempfile=mktemp
+        git stripspace < "$1" > tempfile
+        mv tempfile "$1"
+    fi
+}
+
