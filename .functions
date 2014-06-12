@@ -312,3 +312,36 @@ function np() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
+
+# Elasticsearch cat API (since 1.0)
+function escat() {
+    INDEXCAT="curl -sL localhost:9200/_cat/indices"
+    if [ $# -eq 0 ]; then
+         $INDEXCAT|sort -k2
+    else
+        case $1 in
+            -s) $INDEXCAT|sort -nrk 5; shift 1;;
+            -S) $INDEXCAT|sort -nrk 5; shift 1;;
+            -n) $INDEXCAT|sort -k 2; shift 1;;
+            -t) $INDEXCAT|sort -k 1; shift 1;;
+            *) shift 1;;
+        esac
+    fi
+}
+
+# Elasticsearch top (since 1.0)
+function estop() {
+    clear
+    while true; do escat "$@"; sleep 2; clear; done
+}
+
+# Strip unnecessary whitespace from file with git
+function stripspace() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: stripspace FILE"
+    else
+        local tempfile=mktemp
+        git stripspace < "$1" > tempfile
+        mv tempfile "$1"
+    fi
+}

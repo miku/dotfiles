@@ -55,38 +55,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # rbenv
 if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
 
-# Go
-export PATH=${PATH}:/usr/local/opt/go/libexec/bin
-
-# Elasticsearch
-function escat() {
-    INDEXCAT="curl -sL localhost:9200/_cat/indices"
-    if [ $# -eq 0 ]; then
-         $INDEXCAT|sort -k2
-    else
-        case $1 in
-            -s) $INDEXCAT|sort -nrk 5; shift 1;;
-            -S) $INDEXCAT|sort -nrk 5; shift 1;;
-            -n) $INDEXCAT|sort -k 2; shift 1;;
-            -t) $INDEXCAT|sort -k 1; shift 1;;
-            *) shift 1;;
-        esac
-    fi
-}
-
-function estop() {
-    clear
-    while true; do escat "$@"; sleep 2; clear; done
-}
-
-# strip unnecessary whitespace from file
-function stripspace() {
-    if [ $# -eq 0 ]; then
-        echo "Usage: stripspace FILE"
-    else
-        local tempfile=mktemp
-        git stripspace < "$1" > tempfile
-        mv tempfile "$1"
-    fi
-}
-
