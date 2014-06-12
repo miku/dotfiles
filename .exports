@@ -40,3 +40,16 @@ export PATH=${PATH}:/usr/local/opt/go/libexec/bin
 # Java home
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+
+#
+# Hadoop via homebrew
+#
+export HADOOP_VERSION=2.4.0
+
+export HADOOP_INSTALL=/usr/local/Cellar/hadoop/$HADOOP_VERSION
+export HADOOP_CONF_DIR=$HADOOP_INSTALL/libexec/etc/hadoop
+export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+export YARN_HOME=$HADOOP_INSTALL
+export PATH=$PATH:$HADOOP_INSTALL/bin:$HADOOP_INSTALL/sbin
