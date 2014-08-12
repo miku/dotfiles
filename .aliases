@@ -160,3 +160,6 @@ alias bc='bc -l'
 # Elasticsearch 1+
 alias indexcat='curl -sL localhost:9200/_cat/indices|sort -nrk5'
 
+# Ancient terminals
+# alias matrix="perl -We 'use Time::HiRes;$|++;while(read(STDIN,$c,1)){Time::HiRes::usleep(5000);print $c;}'"
+
