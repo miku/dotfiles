@@ -1,0 +1,8 @@
+[extensions]
+color =
+graphlog =
+pager =
+
+[pager]
+pager = LESS='FSRX' less
+ignore = version, help, update, serve, record
