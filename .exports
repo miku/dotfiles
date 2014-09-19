@@ -55,3 +55,7 @@ export HADOOP_HDFS_HOME=$HADOOP_INSTALL
 export HADOOP_OPTS="-Djava.security.krb5.realm=-Djava.security.krb5.kdc="
 export YARN_HOME=$HADOOP_INSTALL
 export PATH=$PATH:$HADOOP_INSTALL/bin:$HADOOP_INSTALL/sbin
+
+# Android
+export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
+
