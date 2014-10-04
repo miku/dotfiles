@@ -105,3 +105,6 @@
 
 [push]
 	default = matching
+[user]
+	name = Martin Czygan
+	email = martin.czygan@gmail.com
