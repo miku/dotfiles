@@ -1,61 +1,63 @@
+#!/bin/bash
+
 # Make sure we’re using the latest Homebrew
-update
+brew update
 
 # Upgrade any already-installed formulae
-upgrade
+brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-install coreutils
+brew install coreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-install findutils
+brew install findutils
 # Install Bash 4
-install bash
+brew install bash
 
 # Install wget with IRI support
-install wget --enable-iri
+brew install wget --enable-iri
 
 # Install RingoJS and Narwhal
 # Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-install ringojs
-install narwhal
+brew install ringojs
+brew install narwhal
 
 # Install more recent versions of some OS X tools
-install vim --override-system-vi
-tap homebrew/dupes
-install homebrew/dupes/grep
-tap josegonzalez/homebrew-php
-install php55
+brew install vim --override-system-vi
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+brew tap josegonzalez/homebrew-php
+brew install php55
 
 # This formula didn’t work well last time I tried it:
 #install homebrew/dupes/screen
 
 # Install other useful binaries
-install ack
+brew install ack
 #install exiv2
-install git
+brew install git
 #install imagemagick
-install lynx
-install node
-install pigz
-install rename
-install rhino
-install tree
-install webkit2png
-install zopfli
-install p7zip
+brew install lynx
+brew install node
+brew install pigz
+brew install rename
+brew install rhino
+brew install tree
+brew install webkit2png
+brew install zopfli
+brew install p7zip
 
 # More useful things
-install bash-completion
-install ffmpeg
-install git-extras
-install sshuttle
-install tmux
-install vcprompt
-install youtube-dl
+brew install bash-completion
+brew install ffmpeg
+brew install git-extras
+brew install sshuttle
+brew install tmux
+brew install vcprompt
+brew install youtube-dl
 
-tap homebrew/versions
-install lua52
+brew tap homebrew/versions
+brew install lua52
 
 # Additional Stuff
 # install mysql
@@ -64,4 +66,5 @@ install lua52
 
 
 # Remove outdated versions from the cellar
-cleanup
+brew cleanup
+
