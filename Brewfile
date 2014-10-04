@@ -56,8 +56,8 @@ brew install tmux
 brew install vcprompt
 brew install youtube-dl
 
-brew tap homebrew/versions
-brew install lua52
+# brew tap homebrew/versions
+# brew install lua52
 
 # Additional Stuff
 # install mysql
