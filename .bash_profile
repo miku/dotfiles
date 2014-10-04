@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
+# Prepend `/usr/local/bin` to `$PATH`
+export PATH="/usr/local/bin:${PATH}"
+
 # use gnu coreutils
 [ -d /usr/local/opt/coreutils/libexec/gnubin ] && export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
