@@ -60,9 +60,12 @@ brew install youtube-dl
 # brew install lua52
 
 # Additional Stuff
-# install mysql
-# install elasticsearch
-# install lftp
+brew install mysql
+brew install elasticsearch
+brew install lftp
+brew install htop
+brew install tree
+brew install solr
 
 
 # Remove outdated versions from the cellar
