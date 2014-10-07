@@ -1,5 +1,26 @@
 " Make Vim more useful
 set nocompatible
+
+" Vundle ---- START
+" Do this in an extra step:
+" $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+Plugin 'git@github.com:wincent/command-t.git'
+Plugin 'git@github.com:fatih/vim-go.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Vundle ---- END
+
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -101,4 +122,3 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 autocmd filetype crontab setlocal nobackup nowritebackup
-
