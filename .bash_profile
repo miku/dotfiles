@@ -56,5 +56,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f "/usr/local/etc/profile.d/z.sh" ] && source "/usr/local/etc/profile.d/z.sh"
 
 # rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
 
