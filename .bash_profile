@@ -60,6 +60,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
 
 # direnv
-eval "$(direnv hook $0)"
+# eval "$(direnv hook $0)"
 
 export PATH=$HOME/code/chromium.googlesource.com/depot_tools:"$PATH"
