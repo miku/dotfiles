@@ -60,5 +60,6 @@ export PATH=$PATH:$HADOOP_INSTALL/bin:$HADOOP_INSTALL/sbin
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
 
 # Gluish
-export GLUISH_DATA=/Volumes/Data/gluish-data
+# Put this into ~/.extra
+# export GLUISH_DATA=/Volumes/Data/gluish-data
 
