@@ -14,6 +14,8 @@ call vundle#begin()
 
 Plugin 'git@github.com:wincent/command-t.git'
 Plugin 'git@github.com:fatih/vim-go.git'
+Plugin 'git@github.com:vim-scripts/SyntaxRange.git'
+Plugin 'git@github.com:vim-scripts/ingo-library.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
