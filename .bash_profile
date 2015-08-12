@@ -65,5 +65,5 @@ if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=$HOME/code/chromium.googlesource.com/depot_tools:"$PATH"
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
