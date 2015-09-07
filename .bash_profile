@@ -67,3 +67,9 @@ export PATH=$HOME/code/chromium.googlesource.com/depot_tools:"$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/tir/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/tir/google-cloud-sdk/completion.bash.inc'
+
