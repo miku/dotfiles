@@ -12,10 +12,11 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plugin 'git@github.com:wincent/command-t.git'
+Plugin 'git@github.com:kien/ctrlp.vim'
 Plugin 'git@github.com:fatih/vim-go.git'
 Plugin 'git@github.com:vim-scripts/SyntaxRange.git'
 Plugin 'git@github.com:vim-scripts/ingo-library.git'
+Plugin 'git@github.com:mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
