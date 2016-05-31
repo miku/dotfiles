@@ -45,3 +45,4 @@ export RESET
 
 export PS1="\u@\h:\w \[$ORANGE\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
 
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
