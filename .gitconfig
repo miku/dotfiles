@@ -109,3 +109,12 @@
 	name = Martin Czygan
 	email = martin.czygan@gmail.com
 
+[diff "pdf"]
+	textconv = pdfinfo
+
+[diff "zip"]
+	textconv = unzip -v
+
+[diff "bin"]
+	textconv = hexdump -v -C
+
