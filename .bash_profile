@@ -73,3 +73,5 @@ source '/Users/tir/google-cloud-sdk/path.bash.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/tir/google-cloud-sdk/completion.bash.inc'
 
+export PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
+
