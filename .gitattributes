@@ -3,4 +3,4 @@
 # Disabled because of https://github.com/mathiasbynens/dotfiles/issues/149 :(
 
 *.pdf diff=pdf
-*.gif diff=gif
+# *.gif diff=gif
