@@ -74,4 +74,5 @@ source '/Users/tir/google-cloud-sdk/path.bash.inc'
 source '/Users/tir/google-cloud-sdk/completion.bash.inc'
 
 export PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
+export PATH=$PATH:/Users/tir/.cargo/bin
 
