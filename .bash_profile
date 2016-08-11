@@ -76,3 +76,4 @@ source '/Users/tir/google-cloud-sdk/completion.bash.inc'
 export PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
 export PATH=$PATH:/Users/tir/.cargo/bin
 
+export PATH=$PATH:/Users/tir/opt/metafacture-runner-3.1.1
