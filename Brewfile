@@ -78,6 +78,7 @@ brew install wget --enable-iri
 brew install xpdf
 brew install xz
 brew install youtube-dl
+brew install z
 brew install zopfli
 
 brew cleanup
