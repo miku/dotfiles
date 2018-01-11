@@ -36,12 +36,14 @@ brew install fzf
 brew install git
 brew install git-extras
 brew install git-lfs
+brew install golang --devel
 brew install grep
 brew install hashpump
 brew install htop
 brew install hydra
 brew install imagemagick --with-webp
 brew install john
+brew install jq
 brew install knock
 brew install lftp
 brew install lua
@@ -49,6 +51,7 @@ brew install lynx
 brew install mysql
 brew install netpbm
 brew install nmap
+brew install nnn
 brew install node
 brew install openssh
 brew install p7zip
@@ -81,5 +84,8 @@ brew install xz
 brew install youtube-dl
 brew install z
 brew install zopfli
+
+brew tap tidwall/jj
+brew install jj
 
 brew cleanup
