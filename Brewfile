@@ -29,6 +29,7 @@ brew install binwalk
 brew install brew-cask-completion
 brew install cifer
 brew install dex2jar
+brew install direnv
 brew install dns2tcp
 brew install docker-completion
 brew install elasticsearch

@@ -55,9 +55,11 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # rupa/z
 [ -f "/usr/local/etc/profile.d/z.sh" ] && source "/usr/local/etc/profile.d/z.sh"
 
-# Ruby sanity via rbenv. XXX: Add this to ruby.
-if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
+# Ruby sanity via rbenv.
+command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
 
 # FZF!
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+
+command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
