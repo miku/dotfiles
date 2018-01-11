@@ -58,6 +58,7 @@ brew install pv
 brew install rename
 brew install rhino
 brew install rlwrap
+brew install rbenv
 brew install socat
 brew install solr
 brew install sqlmap
