@@ -20,8 +20,8 @@ fi;
 
 # Generic and CTF tools; see https://github.com/ctfs/write-ups.
 brew install ack
-brew install ant
 brew install aircrack-ng
+brew install ant
 brew install bash-completion
 brew install bfg
 brew install binutils
@@ -39,6 +39,7 @@ brew install ffmpeg
 brew install foremost
 brew install fzf
 brew install git
+brew install git-cal
 brew install git-extras
 brew install git-lfs
 brew install golang
@@ -51,8 +52,8 @@ brew install imagemagick --with-webp
 brew install john
 brew install jq
 brew install knock
-brew install lftp
 brew install launchctl-completion
+brew install lftp
 brew install lua
 brew install lynx
 brew install maven
@@ -62,18 +63,18 @@ brew install netpbm
 brew install nmap
 brew install nnn
 brew install node
-brew install openssh
 brew install open-completion
+brew install openssh
 brew install p7zip
 brew install pigz
 brew install pip-completion
 brew install pngcheck
 brew install pv
 brew install python3
+brew install rbenv
 brew install rename
 brew install rhino
 brew install rlwrap
-brew install rbenv
 brew install socat
 brew install solr
 brew install sqlmap
