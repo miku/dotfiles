@@ -34,9 +34,9 @@ set list
 set listchars=tab:→\ ,eol:¬
 set backspace=indent,eol,start
 
-set hlsearch                      
-set incsearch                     
-set ignorecase                    
+set hlsearch
+set incsearch
+set ignorecase
 set smartcase
 
 :nnoremap <CR> :nohlsearch<cr>
