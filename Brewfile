@@ -20,6 +20,7 @@ fi;
 
 # Generic and CTF tools; see https://github.com/ctfs/write-ups.
 brew install ack
+brew install ant
 brew install aircrack-ng
 brew install bash-completion
 brew install bfg
@@ -39,6 +40,7 @@ brew install git
 brew install git-extras
 brew install git-lfs
 brew install golang --devel
+brew install gradle
 brew install grep
 brew install hashpump
 brew install htop
@@ -51,6 +53,7 @@ brew install lftp
 brew install launchctl-completion
 brew install lua
 brew install lynx
+brew install maven
 brew install mupdf
 brew install mysql
 brew install netpbm
