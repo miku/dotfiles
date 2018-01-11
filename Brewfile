@@ -59,6 +59,7 @@ brew install p7zip
 brew install pigz
 brew install pngcheck
 brew install pv
+brew install python3
 brew install rename
 brew install rhino
 brew install rlwrap
