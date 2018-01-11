@@ -16,10 +16,20 @@ export PURPLE
 export RESET
 export WHITE
 
-command -v vcprompt >/dev/null 2>&1 
-if [ $? -eq 0 ]; then
-    export PS1="\u@\h:\w \[$ORANGE\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
-fi
+function defaultprompt() {
+    export PS1='\u@\h: \w $ '
+}
+
+function fancyprompt() {
+    command -v vcprompt >/dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        export PS1="\u@\h:\w \[$ORANGE\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
+    else
+        defaultprompt
+    fi
+}
+
+fancyprompt
 
 # Keep a permanent history.
 mkdir -p ~/.logs
