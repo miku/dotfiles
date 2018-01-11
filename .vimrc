@@ -1,11 +1,6 @@
 set nocompatible
 set encoding=utf-8
 
-colorscheme industry
-highlight NonText ctermfg=8 guifg=gray
-highlight SpecialKey ctermfg=8
-highlight LineNr ctermfg=242
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -51,4 +46,19 @@ set laststatus=2
 
 " Beanshell.
 autocmd BufNewFile,BufRead *.bsh   set syntax=java
+
+colorscheme industry
+highlight NonText ctermfg=8 guifg=gray
+highlight SpecialKey ctermfg=8
+highlight LineNr ctermfg=242
+
+" Trim whitespace.
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhitespace call TrimWhitespace()
+autocmd BufWritePre * :call TrimWhitespace()
 
