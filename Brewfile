@@ -39,7 +39,7 @@ brew install fzf
 brew install git
 brew install git-extras
 brew install git-lfs
-brew install golang --devel
+brew install golang
 brew install gradle
 brew install grep
 brew install hashpump
