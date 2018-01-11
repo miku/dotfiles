@@ -3,8 +3,3 @@
 # sudo pip install virtualenvwrapper
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/.virtualenvs
-
-# Include anaconda bin
-function conda-enable () {
-    [ -d "$HOME/anaconda/bin" ] && export PATH=$PATH:$HOME/anaconda/bin
-}

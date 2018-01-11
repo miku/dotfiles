@@ -1,83 +1,24 @@
 #!/usr/bin/env bash
 
-# Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=16777216
 export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups
-# Make some commands not show up in history
+export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
-# Make vim the default editor.
 export EDITOR='vim';
 
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
-
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
-# Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
-
-# Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# Let bc divide correctly
 export BC_ENV_ARGS=$HOME/.bcrc
 
-# Add rbenv to path, if exists
 [ -d $HOME/.rbenv ] && export PATH="$HOME/.rbenv/bin:$PATH"
 
-# Go
-export GOPATH="$HOME/go"
-export PATH=$PATH:$GOPATH/bin
+[ -d $HOME/go ] && export GOPATH="$HOME/go"
+[ -d $GOPATH/bin ] && export PATH=$PATH:$GOPATH/bin
 
-# Go
-export PATH=${PATH}:/usr/local/opt/go/libexec/bin
-
-# Java home
-# export JAVA_HOME=$(/usr/libexec/java_home)
-
-
-#
-# Hadoop via homebrew
-#
-export HADOOP_VERSION=2.4.0
-
-export HADOOP_INSTALL=/usr/local/Cellar/hadoop/$HADOOP_VERSION
-# export HADOOP_CONF_DIR=$HADOOP_INSTALL/libexec/etc/hadoop
-export HADOOP_CONF_DIR=$HOME/etc/hadoop
-export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
-export HADOOP_COMMON_HOME=$HADOOP_INSTALL
-export HADOOP_HDFS_HOME=$HADOOP_INSTALL
-export HADOOP_OPTS="-Djava.security.krb5.realm=-Djava.security.krb5.kdc="
-export YARN_HOME=$HADOOP_INSTALL
-export PATH=$PATH:$HADOOP_INSTALL/bin:$HADOOP_INSTALL/sbin
-
-# Android
-export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
-
-# Gluish
-# Put this into ~/.extra
-# export GLUISH_DATA=/Volumes/Data/gluish-data
-
-=======
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
-
-# Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+
