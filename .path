@@ -1,3 +1,2 @@
-if [ -d /usr/local/opt/go/libexec/bin ]; then
-    export PATH=$PATH:/usr/local/opt/go/libexec/bin
-fi
+[[ -d /usr/local/opt/go/libexec/bin ]] && export PATH=$PATH:/usr/local/opt/go/libexec/bin
+[[ -d ~/go/bin ]] && export PATH=$HOME/go/bin:$PATH
