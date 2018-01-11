@@ -1,2 +1,2 @@
 [[ -d /usr/local/opt/go/libexec/bin ]] && export PATH=$PATH:/usr/local/opt/go/libexec/bin
-[[ -d ~/go/bin ]] && export PATH=$HOME/go/bin:$PATH
+[[ -d "$HOME/go/bin" ]] && export PATH=$HOME/go/bin:$PATH
