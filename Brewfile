@@ -48,6 +48,7 @@ brew install knock
 brew install lftp
 brew install lua
 brew install lynx
+brew install mupdf
 brew install mysql
 brew install netpbm
 brew install nmap
