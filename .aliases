@@ -115,5 +115,5 @@ if [ "$(uname -s)" == "Darwin" ]; then
     command -v sha1sum > /dev/null || alias sha1sum="shasum"
 fi
 
-musicforprogramming='vlc --intf ncurses $(curl -s https://musicforprogramming.net/rss.php | xmlcutty -path /rss/channel/item/comments -rename "\n" | grep -v ^$ | fzf)'
+alias musicforprogramming='vlc --intf ncurses $(curl -s https://musicforprogramming.net/rss.php | xmlcutty -path /rss/channel/item/comments -rename "\n" | grep -v ^$ | fzf)'
 
