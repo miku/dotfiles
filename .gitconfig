@@ -109,7 +109,7 @@
     port = 1234
     browser = chromium
 
-[url "https://github.com/"]
+[url "git@github.com:"]
     insteadOf = gh:
 
 [url "https://gist.github.com/"]
