@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
