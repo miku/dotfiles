@@ -25,9 +25,11 @@ brew install bash-completion
 brew install bfg
 brew install binutils
 brew install binwalk
+brew install brew-cask-completion
 brew install cifer
 brew install dex2jar
 brew install dns2tcp
+brew install docker-completion
 brew install elasticsearch
 brew install fcrackzip
 brew install ffmpeg
@@ -46,6 +48,7 @@ brew install john
 brew install jq
 brew install knock
 brew install lftp
+brew install launchctl-completion
 brew install lua
 brew install lynx
 brew install mupdf
@@ -55,8 +58,10 @@ brew install nmap
 brew install nnn
 brew install node
 brew install openssh
+brew install open-completion
 brew install p7zip
 brew install pigz
+brew install pip-completion
 brew install pngcheck
 brew install pv
 brew install python3
@@ -76,6 +81,7 @@ brew install the_silver_searcher
 brew install tmux
 brew install tree
 brew install ucspi-tcp # `tcpserver` etc.
+brew install vagrant-completion
 brew install vbindiff
 brew install vcprompt
 brew install vim --override-system-vi
