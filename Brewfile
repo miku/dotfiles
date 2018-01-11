@@ -85,6 +85,7 @@ brew install tcpreplay
 brew install tcptrace
 brew install the_silver_searcher
 brew install tmux
+brew install tokei
 brew install tree
 brew install ucspi-tcp # `tcpserver` etc.
 brew install vagrant-completion
