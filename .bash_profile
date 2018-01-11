@@ -56,3 +56,5 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv 1> /dev/null; then eval "$(rbenv init -)"; fi
 
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+
