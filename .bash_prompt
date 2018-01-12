@@ -8,6 +8,9 @@ PURPLE="\033[1;35m"
 RESET="\033[m"
 WHITE="\033[1;37m"
 
+COLOR256_068="\e[38;5;68m"
+COLOR256_130="\e[38;5;130m"
+
 export BOLD
 export GREEN
 export MAGENTA
@@ -23,7 +26,7 @@ function defaultprompt() {
 function fancyprompt() {
     command -v vcprompt >/dev/null 2>&1
     if [ $? -eq 0 ]; then
-        export PS1="\u@\h:\w \[$ORANGE\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
+        export PS1="\u@\h:\w \[$COLOR256_130\]\$(vcprompt -f '[%n:%b%u%m] ')\[$RESET\]\$ "
     else
         defaultprompt
     fi

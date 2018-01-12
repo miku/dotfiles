@@ -116,4 +116,5 @@ if [ "$(uname -s)" == "Darwin" ]; then
 fi
 
 alias musicforprogramming='vlc --intf ncurses $(curl -s https://musicforprogramming.net/rss.php | xmlcutty -path /rss/channel/item/comments -rename "\n" | grep -v ^$ | fzf)'
+alias bash-colors='/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/gawin/bash-colors-256/master/colors)"'
 
