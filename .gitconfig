@@ -25,7 +25,8 @@
     # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
 
-    page = less -FRSX
+    # pager = less -FRSX
+    pager = diff-so-fancy | less --tabs=4 -RFX
     editor = vim
     preloadindex = true
     fsyncobjectfiles = true
