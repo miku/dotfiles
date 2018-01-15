@@ -71,6 +71,9 @@ brew install pigz
 brew install pip-completion
 brew install pngcheck
 brew install pv
+brew install pyenv
+brew install pyenv-virtualenv
+brew install pyenv-virtualenvwrapper
 brew install python3
 brew install rbenv
 brew install rename
