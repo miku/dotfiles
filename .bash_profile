@@ -65,4 +65,5 @@ command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
 # PyEnv.
 command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(pyenv init -)"
+command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
 
