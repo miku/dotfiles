@@ -33,6 +33,7 @@ brew install dex2jar
 brew install direnv
 brew install dns2tcp
 brew install docker-completion
+brew install dos2unix
 brew install elasticsearch
 brew install fcrackzip
 brew install ffmpeg
