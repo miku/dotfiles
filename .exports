@@ -22,3 +22,5 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
+# https://gist.github.com/miku/99494a5091fb8f100202336f14d8c54c
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
