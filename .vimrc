@@ -73,3 +73,11 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 set scrolloff=8
+set nobackup
+set noswapfile
+set visualbell t_vb=
+set wildmode=longest,list
+
+set splitbelow
+set splitright
+
