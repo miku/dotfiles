@@ -45,6 +45,7 @@
     todo = grep --heading --break --ignore-case -e ' FIX: *' -e ' TODO: *' -e ' XXX: *'
     contributors = shortlog --summary --numbered
     serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    ls-untracked = ls-files . --exclude-standard --others
 
 [apply]
 
