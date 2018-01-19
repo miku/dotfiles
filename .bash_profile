@@ -1,5 +1,6 @@
 export PATH="$HOME/bin:$PATH";
-export PATH="/usr/local/bin:${PATH}"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Use GNU coreutils.
 [ -d /usr/local/opt/coreutils/libexec/gnubin ] && export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
