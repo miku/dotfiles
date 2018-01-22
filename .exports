@@ -24,3 +24,4 @@ export GPG_TTY=$(tty);
 
 # https://gist.github.com/miku/99494a5091fb8f100202336f14d8c54c
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export NNN_USE_EDITOR=1
