@@ -28,3 +28,5 @@ export NNN_USE_EDITOR=1
 
 export MANPAGER='less -s -M +Gg'
 
+# Rustup.
+export PATH="$HOME/.cargo/bin:$PATH"
