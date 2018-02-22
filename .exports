@@ -30,3 +30,6 @@ export MANPAGER='less -s -M +Gg'
 
 # Rustup.
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# https://github.com/daleroberts/itermplot#installation
+export MPLBACKEND="module://itermplot"
