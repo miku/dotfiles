@@ -55,6 +55,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # rupa/z
 [ -f "/usr/local/etc/profile.d/z.sh" ] && source "/usr/local/etc/profile.d/z.sh"
+[ -f "$HOME/code/rupa/z/z.sh" ] && source "$HOME/code/rupa/z/z.sh"
 
 # Ruby sanity via rbenv.
 command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
