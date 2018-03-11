@@ -33,3 +33,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # https://github.com/daleroberts/itermplot#installation
 export MPLBACKEND="module://itermplot"
+
+# Find Go binaries.
+export PATH=/usr/local/go/bin:${PATH}
+
