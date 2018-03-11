@@ -63,3 +63,6 @@ function unquarantine() {
 	done
 }
 
+function readweb() {
+    links -dump "$1" | less
+}
