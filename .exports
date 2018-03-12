@@ -37,3 +37,6 @@ export MPLBACKEND="module://itermplot"
 # Find Go binaries.
 export PATH=/usr/local/go/bin:${PATH}
 
+# PyEnv.
+export PATH=$HOME/.pyenv/bin:${PATH}
+
