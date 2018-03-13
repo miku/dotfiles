@@ -32,7 +32,9 @@ export MANPAGER='less -s -M +Gg'
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # https://github.com/daleroberts/itermplot#installation
-export MPLBACKEND="module://itermplot"
+if [ "$(uname)" == "Darwin" ]; then
+    export MPLBACKEND="module://itermplot"
+fi
 
 # Find Go binaries.
 export PATH=/usr/local/go/bin:${PATH}
