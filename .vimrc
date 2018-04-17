@@ -37,8 +37,6 @@ set list
 set listchars=tab:→\ ,eol:¬
 set backspace=indent,eol,start
 
-hi NonText ctermfg=7 guifg=gray
-
 set hlsearch
 set incsearch
 set ignorecase
@@ -84,3 +82,4 @@ set wildmode=longest,list
 set splitbelow
 set splitright
 
+highlight SpecialKey ctermfg=8
