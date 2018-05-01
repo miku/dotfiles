@@ -72,5 +72,5 @@ command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
 # ROOT (https://root.cern.ch/)
 [ -f "/usr/local/bin/thisroot.sh" ] && source "/usr/local/bin/thisroot.sh"
 
-command -v pandoc &> /dev/null; [[ $= -eq 0 ]] && eval "$(pandoc --bash-completion)"
+command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completion)"
 
