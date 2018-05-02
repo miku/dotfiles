@@ -74,4 +74,5 @@ command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
 
 command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completion)"
 
-[ -d "/usr/local/cuda-9.0/bin" ] && export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH}
+[ -d "/usr/local/cuda-9.0/bin" ] && export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH} && export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
