@@ -16,6 +16,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'keith/swift.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
