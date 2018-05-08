@@ -15,8 +15,8 @@ alias ll="ls -lahF ${colorflag}"
 # List all files colorized in long format, including dot files.
 alias la="ls -laF ${colorflag}"
 
-# Always use color output for `ls`.
-alias ls="command ls ${colorflag}"
+# Always use color output for `ls`. This disturbes sudo.
+# alias ls="command ls ${colorflag}"
 
 # Always enable colored `grep` output.
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
