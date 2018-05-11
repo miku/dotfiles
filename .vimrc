@@ -22,6 +22,8 @@ call plug#end()
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
 
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 map <C-p> :Files<CR>
 
 filetype plugin indent on
