@@ -25,6 +25,8 @@ let g:go_disable_autoinstall = 0
 
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+
 map <C-p> :Files<CR>
 
 filetype plugin indent on
