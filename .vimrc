@@ -17,6 +17,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'keith/swift.vim'
 Plug 'ervandew/supertab'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
