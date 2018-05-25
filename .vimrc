@@ -16,14 +16,11 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'keith/swift.vim'
-Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
-
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
