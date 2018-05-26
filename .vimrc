@@ -2,9 +2,9 @@ set nocompatible
 set encoding=utf-8
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -73,7 +73,7 @@ autocmd BufWritePre * :call TrimWhitespace()
 let g:fzf_tags_command = 'ctags -R'
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+            \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
