@@ -17,6 +17,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
