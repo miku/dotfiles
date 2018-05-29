@@ -87,3 +87,4 @@ set splitbelow
 set splitright
 
 highlight SpecialKey ctermfg=8
+highlight LineNr ctermfg=darkgrey
