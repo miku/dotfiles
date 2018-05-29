@@ -57,7 +57,7 @@ autocmd BufNewFile,BufRead *.bsh   set syntax=java
 
 " colorscheme industry
 highlight NonText ctermfg=8 guifg=gray
-highlight SpecialKey ctermfg=8
+highlight SpecialKey ctermfg=242
 highlight LineNr ctermfg=242
 
 " Trim whitespace.
