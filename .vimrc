@@ -1,5 +1,6 @@
 set nocompatible
 set encoding=utf-8
+set nrformats-=octal
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
