@@ -18,6 +18,7 @@ Plug 'majutsushi/tagbar'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
@@ -55,9 +56,9 @@ set laststatus=2
 autocmd BufNewFile,BufRead *.bsh   set syntax=java
 
 " colorscheme industry
-" highlight NonText ctermfg=8 guifg=gray
-" highlight SpecialKey ctermfg=8
-" highlight LineNr ctermfg=242
+highlight NonText ctermfg=8 guifg=gray
+highlight SpecialKey ctermfg=8
+highlight LineNr ctermfg=242
 
 " Trim whitespace.
 fun! TrimWhitespace()
@@ -88,3 +89,5 @@ set splitright
 
 highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
+
+colorscheme Tomorrow-Night
