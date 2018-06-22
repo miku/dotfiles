@@ -20,6 +20,7 @@ Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
