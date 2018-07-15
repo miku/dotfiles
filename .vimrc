@@ -21,6 +21,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc'
 call plug#end()
 
 let g:go_fmt_command = "goimports"
