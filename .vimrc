@@ -21,9 +21,12 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
+
+let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#spell#enabled = 0
 
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
@@ -95,3 +98,5 @@ highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
 colorscheme Tomorrow-Night
+
+
