@@ -21,8 +21,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
