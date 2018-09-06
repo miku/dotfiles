@@ -25,6 +25,7 @@ Plug 'tomtom/tcomment_vim'
 " Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 let g:pandoc#modules#disabled = ["folding"]
