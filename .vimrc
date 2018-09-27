@@ -34,6 +34,9 @@ let g:pandoc#spell#enabled = 0
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
 
+let g:formatdef_custom_c = '"astyle --mode=c --style=linux --align-pointer=name"'
+let g:formatters_c = ['custom_c']
+
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 map <C-p> :Files<CR>
