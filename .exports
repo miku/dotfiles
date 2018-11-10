@@ -42,3 +42,6 @@ export PATH=/usr/local/go/bin:${PATH}
 # PyEnv.
 export PATH=$HOME/.pyenv/bin:${PATH}
 
+# Python user-base installs.
+export PATH=$HOME/.local/bin:${PATH}
+
