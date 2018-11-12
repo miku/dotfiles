@@ -45,3 +45,5 @@ export PATH=$HOME/.pyenv/bin:${PATH}
 # Python user-base installs.
 export PATH=$HOME/.local/bin:${PATH}
 
+# https://docs.docker.com/engine/security/trust/content_trust/
+export DOCKER_CONTENT_TRUST=1
