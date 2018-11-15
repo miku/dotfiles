@@ -1,5 +1,14 @@
 # Install virtualenvwrapper beforehand
 # sudo easy_install pip
 # sudo pip install virtualenvwrapper
-[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=$HOME/.virtualenvs
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    # Mainstream.
+    source /usr/local/bin/virtualenvwrapper.sh
+    export WORKON_HOME=$HOME/.virtualenvs
+elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    # Arch.
+    source /usr/bin/virtualenvwrapper.sh
+    export WORKON_HOME=$HOME/.virtualenvs
+fi
+
