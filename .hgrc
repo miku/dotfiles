@@ -7,6 +7,3 @@ pager =
 pager = LESS='FSRX' less
 ignore = version, help, update, serve, record
 
-[extensions]
-hgext.bookmarks =
-hggit =
