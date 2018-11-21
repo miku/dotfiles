@@ -20,7 +20,7 @@ export RESET
 export WHITE
 
 function defaultprompt() {
-    export PS1='\u@\h: \w $ '
+    export PS1='\u@\h:\w $ '
 }
 
 function fancyprompt() {
