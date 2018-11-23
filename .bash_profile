@@ -67,7 +67,7 @@ command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
 # PyEnv.
 command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(pyenv init -)"
-command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
+# command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
 
 # ROOT (https://root.cern.ch/)
 [ -f "/usr/local/bin/thisroot.sh" ] && source "/usr/local/bin/thisroot.sh"

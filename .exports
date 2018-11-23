@@ -24,6 +24,7 @@ export GPG_TTY=$(tty);
 
 # https://gist.github.com/miku/99494a5091fb8f100202336f14d8c54c
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PYENV_ROOT=$HOME/.pyenv
 export NNN_USE_EDITOR=1
 
 export MANPAGER='less -s -M +Gg'
