@@ -22,11 +22,19 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
+Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
 
+" ColorStepper Keys
+nmap <F6> <Plug>ColorstepPrev
+nmap <F7> <Plug>ColorstepNext
+nmap <S-F7> <Plug>ColorstepReload
+
+" Pandoc
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#spell#enabled = 0
 
+" vim-go
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
 
