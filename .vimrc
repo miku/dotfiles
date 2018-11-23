@@ -99,7 +99,7 @@ set splitright
 highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
