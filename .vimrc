@@ -23,6 +23,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'qualiabyte/vim-colorstepper'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " ColorStepper Keys
@@ -107,7 +108,8 @@ set splitright
 highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
-colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night-Eighties
+colorscheme space-vim-dark
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
