@@ -22,7 +22,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'qualiabyte/vim-colorstepper'
+" Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
 
 " ColorStepper Keys
