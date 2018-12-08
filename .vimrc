@@ -26,9 +26,9 @@ Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
 
 " ColorStepper Keys
-nmap <F6> <Plug>ColorstepPrev
-nmap <F7> <Plug>ColorstepNext
-nmap <S-F7> <Plug>ColorstepReload
+" nmap <F6> <Plug>ColorstepPrev
+" nmap <F7> <Plug>ColorstepNext
+" nmap <S-F7> <Plug>ColorstepReload
 
 " Pandoc
 let g:pandoc#modules#disabled = ["folding"]
