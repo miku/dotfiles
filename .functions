@@ -66,3 +66,28 @@ function unquarantine() {
 function readweb() {
     links -dump "$1" | less
 }
+
+worldclock() {
+    ADDIS_ABABA=`TZ=Africa/Addis_Ababa date +"%c (%z %Z)"`
+    BERLIN=`TZ=Europe/Berlin date +"%c (%z %Z)"`
+    CHICAGO=`TZ=America/Chicago date +"%c (%z %Z)"`
+    HONK_KONG=`TZ=Asia/Hong_Kong date +"%c (%z %Z)"`
+    LONDON=`TZ=Europe/London date +"%c (%z %Z)"`
+    LOS_ANGELES=`TZ=America/Los_Angeles date +"%c (%z %Z)"`
+    MOSCOW=`TZ=Europe/Moscow date +"%c (%z %Z)"`
+    NEW_YORK=`TZ=America/New_York date +"%c (%z %Z)"`
+    SOFIA=`TZ=Europe/Sofia date +"%c (%z %Z)"`
+    SYDNEY=`TZ=Australia/Sydney date +"%c (%z %Z)"`
+    TOKYO=`TZ=Asia/Tokyo date +"%c (%z %Z)"`
+    echo "Addis Ababa        $ADDIS_ABABA"
+    echo "* Berlin           $BERLIN"
+    echo "Chicago            $CHICAGO"
+    echo "* Hong Kong          $HONK_KONG"
+    echo "London             $LONDON"
+    echo "Los Angeles      $LOS_ANGELES"
+    echo "Moscow             $MOSCOW"
+    echo "* New York           $NEW_YORK"
+    echo "Sofia              $SOFIA"
+    echo "Sydney             $SYDNEY"
+    echo "Tokyo              $TOKYO"
+}
