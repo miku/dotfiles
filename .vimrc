@@ -117,3 +117,5 @@ nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
 nnoremap 's :Files /usr/local/go/src<CR>
 
+set undofile
+set undodir=~/.vim/undodir
