@@ -34,7 +34,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # https://github.com/daleroberts/itermplot#installation
 if [ "$(uname)" == "Darwin" ]; then
-    export MPLBACKEND="module://itermplot"
+    # export MPLBACKEND="module://itermplot"
 fi
 
 # Find Go binaries.
