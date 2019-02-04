@@ -9,9 +9,8 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 elif [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     export WORKON_HOME=$HOME/.virtualenvs
-elif [ -f $(which virtualenvwrapper.sh) ]; then
-    # Arch.
-    source $(which /usr/bin/virtualenvwrapper.sh)
+elif [ ! -z $(which virtualenvwrapper.sh) ]; then
+    source $(which virtualenvwrapper.sh)
     export WORKON_HOME=$HOME/.virtualenvs
 elif [ -f $HOME/.pyenv/versions/3.6.5/bin/virtualenvwrapper.sh ]; then
     # Hack os MacOS.
