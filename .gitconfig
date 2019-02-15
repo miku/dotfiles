@@ -26,8 +26,8 @@
     untrackedCache = true
 
     # pager = less -FRSX
-    # pager = diff-so-fancy | less --tabs=4 -RFX
-    pager = less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    # pager = less --tabs=4 -RFX
     editor = vim
     preloadindex = true
     fsyncobjectfiles = true
@@ -71,6 +71,7 @@
     frag = magenta bold
     old = red
     new = green
+
 
 [color "status"]
 
