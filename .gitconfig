@@ -1,3 +1,6 @@
+[commit]
+    verbose = true
+
 [user]
     name = Martin Czygan
     email = martin.czygan@gmail.com
