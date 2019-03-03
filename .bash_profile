@@ -76,5 +76,5 @@ command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completi
 
 [ -d "/usr/local/cuda-9.0/bin" ] && export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH} && export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# source /home/tir/anaconda3/etc/profile.d/conda.sh
+[ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 
