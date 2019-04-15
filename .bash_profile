@@ -63,7 +63,7 @@ command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
 # FZF!
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
-command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
+# command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
 # PyEnv.
 command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(pyenv init -)"
