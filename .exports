@@ -53,3 +53,5 @@ export DOCKER_CONTENT_TRUST=1
 # Accessibility warnings, https://blog.inf.ed.ac.uk/chris/those-accessibility-warnings-again/
 export NO_AT_BRIDGE=1
 
+# wasm binary
+export PATH=$PATH:/usr/lib/go/misc/wasm/
