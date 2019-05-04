@@ -50,6 +50,10 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 map <C-p> :Files<CR>
 
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 filetype plugin indent on
 syntax enable
 
