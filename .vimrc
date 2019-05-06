@@ -104,10 +104,6 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
-autocmd bufwritepost *.html silent !prettier --print-width 100 --write --tab-width 4 %
-autocmd bufwritepost *.js silent !prettier --print-width 100 --write --tab-width 4 %
-autocmd bufwritepost *.css silent !prettier --print-width 100 --write --tab-width 4 %
-
 set scrolloff=8
 set nobackup
 set noswapfile
