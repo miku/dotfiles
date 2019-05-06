@@ -104,6 +104,10 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
+autocmd bufwritepost *.html silent !prettier --print-width 100 --write --tab-width 4 %
+autocmd bufwritepost *.js silent !prettier --print-width 100 --write --tab-width 4 %
+autocmd bufwritepost *.css silent !prettier --print-width 100 --write --tab-width 4 %
+
 set scrolloff=8
 set nobackup
 set noswapfile
@@ -117,8 +121,8 @@ highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
 " colorscheme Tomorrow-Night-Eighties
-" colorscheme space-vim-dark
-colorscheme Light
+colorscheme space-vim-dark
+" colorscheme Light
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
