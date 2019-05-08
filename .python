@@ -8,7 +8,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
 elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
     # Arch
-    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+    source /usr/bin/virtualenvwrapper.sh
     export WORKON_HOME=$HOME/.virtualenvs
 elif [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
