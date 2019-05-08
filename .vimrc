@@ -101,6 +101,7 @@ au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+autocmd FileType md,markdown let b:autoformat_autoindent=0
 
 " FZF.
 let g:fzf_tags_command = 'ctags -R'
