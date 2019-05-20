@@ -10,7 +10,7 @@ else # macOS `ls`
 fi
 
 if hash exa 2>/dev/null; then
-	alias ll="exa -l"
+	alias ll="exa -la"
 else
 	alias ll="ls -lahF ${colorflag}"
 fi
