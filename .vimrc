@@ -26,6 +26,7 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'cespare/vim-toml'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+Plug 'goerz/jupytext.vim'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
