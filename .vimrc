@@ -101,7 +101,7 @@ autocmd BufWritePre * :call TrimWhitespace()
 au BufWrite *.html :Autoformat
 au BufWrite *.css :Autoformat
 au BufWrite *.js :Autoformat
-au BufWrite *.py :Autoformat
+" au BufWrite *.py :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
