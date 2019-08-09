@@ -1,3 +1,5 @@
+stty -ixon # https://unix.stackexchange.com/a/72092/376
+
 export PATH="$HOME/bin:$PATH";
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
