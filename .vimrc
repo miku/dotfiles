@@ -23,7 +23,11 @@ Plug 'flazz/vim-colorschemes'
 " Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'liuchengxu/space-vim-dark'
-" Plug 'tpope/vim-surround'
+Plug 'cespare/vim-toml'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'goerz/jupytext.vim'
+Plug 'vmchale/polyglot-vim'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
@@ -47,6 +51,10 @@ let g:formatters_c = ['custom_c']
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 map <C-p> :Files<CR>
+
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 filetype plugin indent on
 syntax enable
@@ -90,6 +98,15 @@ endfun
 command! TrimWhitespace call TrimWhitespace()
 autocmd BufWritePre * :call TrimWhitespace()
 
+" Autoformat
+au BufWrite *.html :Autoformat
+au BufWrite *.css :Autoformat
+au BufWrite *.js :Autoformat
+" au BufWrite *.py :Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+
 " FZF.
 let g:fzf_tags_command = 'ctags -R'
 autocmd! FileType fzf
@@ -112,6 +129,7 @@ highlight LineNr ctermfg=darkgrey
 
 " colorscheme Tomorrow-Night-Eighties
 colorscheme space-vim-dark
+" colorscheme Light
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>

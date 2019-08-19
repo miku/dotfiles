@@ -6,12 +6,19 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     # Mainstream.
     source /usr/local/bin/virtualenvwrapper.sh
     export WORKON_HOME=$HOME/.virtualenvs
+elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    # Arch
+    source /usr/bin/virtualenvwrapper.sh
+    export WORKON_HOME=$HOME/.virtualenvs
 elif [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
     export WORKON_HOME=$HOME/.virtualenvs
-elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
-    # Arch.
-    source /usr/bin/virtualenvwrapper.sh
+elif [ -f "/home/tir/.pyenv/versions/$(python -c 'import platform; print(platform.python_version())')/bin/virtualenvwrapper.sh" ]; then
+    source "/home/tir/.pyenv/versions/$(python -c 'import platform; print(platform.python_version())')/bin/virtualenvwrapper.sh"
+    export WORKON_HOME=$HOME/.virtualenvs
+elif [ -f $HOME/.pyenv/versions/3.6.5/bin/virtualenvwrapper.sh ]; then
+    # Hack os MacOS.
+    source $HOME/.pyenv/versions/3.6.5/bin/virtualenvwrapper.sh
     export WORKON_HOME=$HOME/.virtualenvs
 fi
 

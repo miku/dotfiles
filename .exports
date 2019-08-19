@@ -33,12 +33,13 @@ export MANPAGER='less -s -M +Gg'
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # https://github.com/daleroberts/itermplot#installation
-if [ "$(uname)" == "Darwin" ]; then
-    export MPLBACKEND="module://itermplot"
-fi
+# if [ "$(uname)" == "Darwin" ]; then
+#     export MPLBACKEND="module://itermplot"
+# fi
 
 # Find Go binaries.
 export PATH=/usr/local/go/bin:${PATH}
+export PATH=$HOME/go/bin:${PATH}
 
 # PyEnv.
 export PATH=$HOME/.pyenv/bin:${PATH}
@@ -52,3 +53,5 @@ export DOCKER_CONTENT_TRUST=1
 # Accessibility warnings, https://blog.inf.ed.ac.uk/chris/those-accessibility-warnings-again/
 export NO_AT_BRIDGE=1
 
+# wasm binary
+export PATH=$PATH:/usr/lib/go/misc/wasm/

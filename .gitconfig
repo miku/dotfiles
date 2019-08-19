@@ -1,3 +1,6 @@
+[commit]
+    verbose = true
+
 [user]
     name = Martin Czygan
     email = martin.czygan@gmail.com
@@ -26,8 +29,8 @@
     untrackedCache = true
 
     # pager = less -FRSX
-    # pager = diff-so-fancy | less --tabs=4 -RFX
-    pager = less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    # pager = less --tabs=4 -RFX
     editor = vim
     preloadindex = true
     fsyncobjectfiles = true
@@ -53,6 +56,9 @@
     # Detect whitespace errors when applying a patch
     whitespace = fix
 
+[status]
+    showuntrackedfiles = all
+
 [color]
 
     # Use colors in Git commands that are capable of colored output when
@@ -72,6 +78,7 @@
     old = red
     new = green
 
+
 [color "status"]
 
     added = yellow
@@ -81,7 +88,7 @@
 [help]
 
     # Automatically correct and execute mistyped commands
-    autocorrect = 1
+    autocorrect = 0
 
 [merge]
 

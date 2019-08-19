@@ -1,27 +1,34 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+for req in rsync git; do
+    command -v $req >/dev/null 2>&1 || {
+        echo >&2 "$req required"
+        exit 1
+    }
+done
 
-git pull origin master;
+cd "$(dirname "${BASH_SOURCE}")"
+
+git pull origin master
 
 function doIt() {
     rsync --exclude ".git/" \
-          --exclude ".DS_Store" \
-          --exclude ".osx" \
-          --exclude "bootstrap.sh" \
-          --exclude "README.md" \
-          --exclude "LICENSE" \
-          -avh --no-perms . ~;
-    source ~/.bash_profile;
+        --exclude ".DS_Store" \
+        --exclude ".osx" \
+        --exclude "bootstrap.sh" \
+        --exclude "README.md" \
+        --exclude "LICENSE" \
+        -avh --no-perms . ~
+    source ~/.bash_profile
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-	doIt;
+    doIt
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/N) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt;
-	fi;
-fi;
-unset doIt;
+    read -p "This may overwrite existing files in your home directory. Are you sure? (y/N) " -n 1
+    echo ""
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        doIt
+    fi
+fi
+unset doIt

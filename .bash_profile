@@ -1,3 +1,5 @@
+stty -ixon # https://unix.stackexchange.com/a/72092/376
+
 export PATH="$HOME/bin:$PATH";
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -63,7 +65,7 @@ command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
 # FZF!
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
-command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
+# command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
 # PyEnv.
 command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(pyenv init -)"
@@ -75,4 +77,6 @@ command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(pyenv init -)"
 command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completion)"
 
 [ -d "/usr/local/cuda-9.0/bin" ] && export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH} && export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+[ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 
