@@ -22,7 +22,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 " Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'liuchengxu/space-vim-dark'
+Plug 'liuchengxu/space-vim-theme'
 Plug 'cespare/vim-toml'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
@@ -131,7 +131,7 @@ highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
 " colorscheme Tomorrow-Night-Eighties
-colorscheme space-vim-dark
+colorscheme space_vim_theme
 " colorscheme Light
 " colorscheme hemisu
 
