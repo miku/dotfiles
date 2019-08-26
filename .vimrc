@@ -28,6 +28,8 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'goerz/jupytext.vim'
 Plug 'vmchale/polyglot-vim'
+Plug 'noahfrederick/vim-noctu'
+Plug 'jeffkreeftmeijer/vim-dim'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
