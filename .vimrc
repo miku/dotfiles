@@ -29,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'goerz/jupytext.vim'
 Plug 'vmchale/polyglot-vim'
 Plug 'noahfrederick/vim-noctu'
+Plug 'noahfrederick/vim-hemisu'
 Plug 'jeffkreeftmeijer/vim-dim'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
@@ -132,7 +133,7 @@ highlight LineNr ctermfg=darkgrey
 " colorscheme Tomorrow-Night-Eighties
 " colorscheme space-vim-dark
 " colorscheme Light
-colorscheme dim
+colorscheme hemisu
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
