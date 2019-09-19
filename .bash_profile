@@ -10,7 +10,7 @@ export PATH="/usr/local/sbin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra,python}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -80,3 +80,9 @@ command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completi
 
 [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 
+# Load the shell dotfiles, and then some:
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{extra,python}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
