@@ -70,8 +70,8 @@ set nowrap
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set list
-set listchars=tab:→\ ,eol:¬
+set nolist
+" set listchars=tab:→\ ,eol:¬
 set backspace=indent,eol,start
 
 set hlsearch
