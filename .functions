@@ -79,15 +79,6 @@ worldclock() {
     SOFIA=`TZ=Europe/Sofia date +"%c (%z %Z)"`
     SYDNEY=`TZ=Australia/Sydney date +"%c (%z %Z)"`
     TOKYO=`TZ=Asia/Tokyo date +"%c (%z %Z)"`
-    echo "Addis Ababa        $ADDIS_ABABA"
-    echo "* Berlin           $BERLIN"
-    echo "Chicago            $CHICAGO"
-    echo "* Hong Kong          $HONK_KONG"
-    echo "London             $LONDON"
-    echo "Los Angeles      $LOS_ANGELES"
-    echo "Moscow             $MOSCOW"
-    echo "* New York           $NEW_YORK"
-    echo "Sofia              $SOFIA"
-    echo "Sydney             $SYDNEY"
-    echo "Tokyo              $TOKYO"
+    echo "Berlin             $BERLIN"
+    echo "Los Angeles        $LOS_ANGELES"
 }
