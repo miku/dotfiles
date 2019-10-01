@@ -48,7 +48,7 @@ export PATH=$HOME/.pyenv/bin:${PATH}
 export PATH=$HOME/.local/bin:${PATH}
 
 # https://docs.docker.com/engine/security/trust/content_trust/
-export DOCKER_CONTENT_TRUST=1
+# export DOCKER_CONTENT_TRUST=1
 
 # Accessibility warnings, https://blog.inf.ed.ac.uk/chris/those-accessibility-warnings-again/
 export NO_AT_BRIDGE=1
