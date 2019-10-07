@@ -32,6 +32,8 @@ Plug 'noahfrederick/vim-noctu'
 Plug 'noahfrederick/vim-hemisu'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'rust-lang/rust.vim'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
