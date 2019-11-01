@@ -80,6 +80,9 @@ command -v pandoc &> /dev/null; [[ $? -eq 0 ]] && eval "$(pandoc --bash-completi
 
 [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ] && source $HOME/anaconda3/etc/profile.d/conda.sh
 
+# Jira completion, https://github.com/go-jira/jira
+command -v jira &> /dev/null; [[ $? -eq 0 ]] && eval "$(jira --completion-script-bash)"
+
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{extra,python}; do
