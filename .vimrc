@@ -35,6 +35,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'rhysd/git-messenger.vim'
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
