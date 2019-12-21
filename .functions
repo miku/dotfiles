@@ -82,3 +82,8 @@ worldclock() {
     echo "Berlin             $BERLIN"
     echo "Los Angeles        $LOS_ANGELES"
 }
+
+ytmp3() {
+    hash youtube-dl 2>/dev/null || { echo >&2 "youtube-dl required"; exit 1; }
+    youtube-dl -x --audio-format mp3 "$1"
+}
