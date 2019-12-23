@@ -152,10 +152,10 @@ nnoremap 's :Files /usr/local/go/src<CR>
 set undofile
 set undodir=~/.vim/undodir
 
-augroup autoformat_settings
-  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  autocmd FileType gn AutoFormatBuffer gn
-  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-  autocmd FileType python AutoFormatBuffer yapf
-  autocmd FileType rust AutoFormatBuffer rustfmt
-augroup END
+" augroup autoformat_settings
+"   autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+"   autocmd FileType gn AutoFormatBuffer gn
+"   autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+"   autocmd FileType python AutoFormatBuffer yapf
+"   autocmd FileType rust AutoFormatBuffer rustfmt
+" augroup END
