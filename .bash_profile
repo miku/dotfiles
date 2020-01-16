@@ -60,7 +60,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f "$HOME/code/rupa/z/z.sh" ] && source "$HOME/code/rupa/z/z.sh"
 
 # Ruby sanity via rbenv.
-command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
+# command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
 
 # FZF!
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
