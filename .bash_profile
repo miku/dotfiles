@@ -63,7 +63,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
 
 # FZF!
-[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+# [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
 # command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
 
