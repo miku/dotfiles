@@ -87,3 +87,16 @@ ytmp3() {
     hash youtube-dl 2>/dev/null || { echo >&2 "youtube-dl required"; exit 1; }
     youtube-dl -x --audio-format mp3 "$1"
 }
+
+jarexe() {
+    if [ -z "$1" ]; then
+        echo "usage: jarexe JARFILE"
+    else
+        filename=$(mktemp)
+        echo '#!/bin/sh' >> "$filename"
+        echo 'exec java -server -Xmx1024m -Xms1024m -jar $0 "$@"' >> "$filename"
+        cat "$1" >> "$filename"
+        chmod +x "$filename"
+        echo "The $1 has successfully been turned into an executable: $filename"
+    fi
+}
