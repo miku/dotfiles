@@ -67,7 +67,7 @@ function readweb() {
     links -dump "$1" | less
 }
 
-worldclock() {
+function worldclock() {
     ADDIS_ABABA=`TZ=Africa/Addis_Ababa date +"%c (%z %Z)"`
     BERLIN=`TZ=Europe/Berlin date +"%c (%z %Z)"`
     CHICAGO=`TZ=America/Chicago date +"%c (%z %Z)"`
@@ -83,12 +83,12 @@ worldclock() {
     echo "Los Angeles        $LOS_ANGELES"
 }
 
-ytmp3() {
+function ytmp3() {
     hash youtube-dl 2>/dev/null || { echo >&2 "youtube-dl required"; exit 1; }
     youtube-dl -x --audio-format mp3 "$1"
 }
 
-jarexe() {
+function jarexe() {
     if [ -z "$1" ]; then
         echo "usage: jarexe JARFILE"
     else
