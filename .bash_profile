@@ -89,3 +89,8 @@ for file in ~/.{extra,python}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
+
+# SDKMAN, https://sdkman.io
+export SDKMAN_DIR="/home/tir/.sdkman"
+[[ -s "/home/tir/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tir/.sdkman/bin/sdkman-init.sh"
+
