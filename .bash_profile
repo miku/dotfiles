@@ -94,3 +94,7 @@ unset file
 export SDKMAN_DIR="/home/tir/.sdkman"
 [[ -s "/home/tir/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tir/.sdkman/bin/sdkman-init.sh"
 
+# SPARK
+[ -d "$HOME/opt/spark" ] && export SPARK_HOME="$HOME/opt/spark"
+[ -d "$SPARK_HOME/bin" ] && export PATH="$PATH:$SPARK_HOME/bin"
+
