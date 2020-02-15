@@ -1,4 +1,5 @@
 *.pdf diff=pdf
 *.gif diff=image
 *.jpg diff=image
+*.JPG diff=image
 *.png diff=image
