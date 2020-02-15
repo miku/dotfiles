@@ -113,6 +113,11 @@
 
     textconv = hexdump -v -C
 
+[diff "image"]
+
+    command = git-imgdiff
+
+
 [instaweb]
 
     local = true
@@ -129,3 +134,9 @@
 [url "https://bitbucket.org/"]
     insteadOf = bb:
 
+# image diffs: https://akikoskinen.info/image-diffs-with-git/
+#
+# [~]$ git config --global diff.image.command '~/bin/git-imgdiff'
+# [~]$ cat ~/bin/git-imgdiff
+#     #!/bin/sh
+#     #compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title "$1" -
