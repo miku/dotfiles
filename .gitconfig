@@ -117,6 +117,11 @@
 
     command = git-imgdiff
 
+[diff "pandoc"]
+
+    textconv = pandoc --to=markdown
+    prompt = false
+
 
 [instaweb]
 

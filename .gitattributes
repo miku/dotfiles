@@ -3,3 +3,4 @@
 *.jpg diff=image
 *.JPG diff=image
 *.png diff=image
+*.docx diff=pandoc
