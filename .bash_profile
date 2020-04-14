@@ -10,7 +10,7 @@ export PATH="/usr/local/sbin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions}; do
+for file in $HOME/.{path,bash_prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -91,11 +91,11 @@ done
 unset file
 
 # Only source .python, if we have a pyenv.
-command -v pyenv &> /dev/null ; [[ $? -eq 0 ]] && [ -r "~/.python" ] && [ -f "~/.python" ] && source "~/.python"
+command -v pyenv &> /dev/null ; [[ $? -eq 0 ]] && [ -r "$HOME/.python" ] && [ -f "$HOME/.python" ] && source "~/.python"
 
 # SDKMAN, https://sdkman.io
-export SDKMAN_DIR="/home/tir/.sdkman"
-[[ -s "/home/tir/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tir/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # SPARK
 [ -d "$HOME/opt/spark" ] && export SPARK_HOME="$HOME/opt/spark"
