@@ -90,6 +90,9 @@ for file in ~/.{extra}; do
 done
 unset file
 
+# Only source .python, if we have a pyenv.
+command -v pyenv &> /dev/null ; [[ $? -eq 0 ]] && [ -r "~/.python" ] && [ -f "~/.python" ] && source "~/.python"
+
 # SDKMAN, https://sdkman.io
 export SDKMAN_DIR="/home/tir/.sdkman"
 [[ -s "/home/tir/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tir/.sdkman/bin/sdkman-init.sh"
