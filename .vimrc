@@ -39,6 +39,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'skywind3000/vim-keysound'
 
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
