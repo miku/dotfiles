@@ -145,3 +145,10 @@
 # [~]$ cat ~/bin/git-imgdiff
 #     #!/bin/sh
 #     #compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title "$1" -
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
