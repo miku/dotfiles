@@ -142,8 +142,8 @@ highlight LineNr ctermfg=darkgrey
 
 " colorscheme Tomorrow-Night-Eighties
 set background=dark
-" colorscheme space_vim_theme
-colorscheme Light
+colorscheme space_vim_theme
+" colorscheme Light
 " colorscheme Light
 " colorscheme hemisu
 
