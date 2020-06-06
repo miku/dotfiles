@@ -141,10 +141,9 @@ highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
 " colorscheme Tomorrow-Night-Eighties
-set background=dark
-colorscheme space_vim_theme
-" colorscheme Light
-" colorscheme Light
+"set background=dark
+"colorscheme space_vim_theme
+colorscheme Light
 " colorscheme hemisu
 
 nnoremap 'c :Files $HOME/code/miku<CR>
