@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu
+
 for req in rsync git; do
     command -v $req >/dev/null 2>&1 || {
         echo >&2 "$req required"
@@ -11,7 +13,7 @@ cd "$(dirname "${BASH_SOURCE}")"
 
 git pull origin master
 
-function doIt() {
+function sync() {
     rsync --exclude ".git/" \
         --exclude ".DS_Store" \
         --exclude ".osx" \
@@ -23,12 +25,12 @@ function doIt() {
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-    doIt
+    sync
 else
     read -p "This may overwrite existing files in your home directory. Are you sure? (y/N) " -n 1
     echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        doIt
+        sync
     fi
 fi
 unset doIt
