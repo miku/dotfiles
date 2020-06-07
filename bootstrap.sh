@@ -24,13 +24,5 @@ function sync() {
     source ~/.bash_profile
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
-    sync
-else
-    read -p "This may overwrite existing files in your home directory. Are you sure? (y/N) " -n 1
-    echo ""
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        sync
-    fi
-fi
-unset doIt
+sync
+unset sync
