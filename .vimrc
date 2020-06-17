@@ -40,6 +40,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'skywind3000/vim-keysound'
+Plug 'tmhedberg/SimpylFold'
 
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
