@@ -130,3 +130,5 @@ fi
 # alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
+
+alias grobid-start='docker run -t --rm --init -p 8070:8070 -p 8071:8071 lfoppiano/grobid:0.6.0'
