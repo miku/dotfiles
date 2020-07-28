@@ -161,3 +161,6 @@ set undodir=~/.vim/undodir
 "   autocmd FileType python AutoFormatBuffer yapf
 "   autocmd FileType rust AutoFormatBuffer rustfmt
 " augroup END
+"
+
+set nofoldenable    " disable folding
