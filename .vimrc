@@ -166,3 +166,5 @@ set undodir=~/.vim/undodir
 "
 
 set nofoldenable    " disable folding
+
+let g:rustfmt_autosave = 1
