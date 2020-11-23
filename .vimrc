@@ -43,6 +43,7 @@ Plug 'skywind3000/vim-keysound'
 Plug 'tmhedberg/SimpylFold'
 Plug 'jvirtanen/vim-hcl'
 Plug 'rust-lang/rust.vim'
+Plug 'letorbi/vim-colors-modern-borland'
 
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
