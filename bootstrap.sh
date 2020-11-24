@@ -16,6 +16,7 @@ function sync() {
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
+		--exclude "Makefile" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~
