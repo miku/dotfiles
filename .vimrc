@@ -63,6 +63,10 @@ let g:pandoc#spell#enabled = 0
 let g:go_fmt_command = "goimports"
 let g:go_disable_autoinstall = 0
 
+" https://github.com/golang/tools/blob/master/gopls/doc/vim.md#vim-go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 let g:formatdef_custom_c = '"astyle --mode=c --style=linux --align-pointer=name"'
 let g:formatters_c = ['custom_c']
 
@@ -170,3 +174,4 @@ set undodir=~/.vim/undodir
 set nofoldenable    " disable folding
 
 let g:rustfmt_autosave = 1
+
