@@ -91,7 +91,7 @@ done
 unset file
 
 # Only source .python, if we have a pyenv.
-command -v pyenv &> /dev/null ; [[ $? -eq 0 ]] && [ -r "$HOME/.python" ] && [ -f "$HOME/.python" ] && source "$HOME/.python"
+[ -x "$(command -v pyenv)" ] && [ -r "$HOME/.python" ] && [ -f "$HOME/.python" ] && source "$HOME/.python"
 
 # SDKMAN, https://sdkman.io
 export SDKMAN_DIR="$HOME/.sdkman"
