@@ -101,3 +101,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [ -d "$HOME/opt/spark" ] && export SPARK_HOME="$HOME/opt/spark"
 [ -d "$SPARK_HOME/bin" ] && export PATH="$PATH:$SPARK_HOME/bin"
 
+
+[ -d "$HOME/code/so-fancy/diff-so-fancy" ] && export PATH="$PATH:$HOME/code/so-fancy/diff-so-fancy"
+
