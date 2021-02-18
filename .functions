@@ -105,6 +105,6 @@ function lvz() {
     if [ -z "$1" ]; then
         echo "usage: lvz URL"
     else
-        curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s
+        curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s | less
     fi
 }
