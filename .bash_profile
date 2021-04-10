@@ -85,7 +85,7 @@ command -v jira &> /dev/null; [[ $? -eq 0 ]] && eval "$(jira --completion-script
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{python,extra}; do
+for file in ~/.{python,java,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
