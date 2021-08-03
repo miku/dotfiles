@@ -136,4 +136,7 @@ alias grobid-start='docker run -t --rm --init -p 8070:8070 -p 8071:8071 lfoppian
 
 alias cdtmp='cd $(mktemp -d)'
 
-command -v pngphoon >/dev/null && alias moonimg="T=$(mktemp); pngphoon -w 800 -h 800 -f $T && catimg -w 120 $T && rm -f $T"
+command -v pngphoon >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    alias moonimg='T="$(mktemp)"; pngphoon -w 800 -h 800 -f "$T" && catimg -w 120 "$T" && rm -f "$T"'
+fi
