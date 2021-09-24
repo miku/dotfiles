@@ -9,31 +9,34 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'airblade/vim-gitgutter'
 Plug 'caglartoklu/borlandp.vim'
 Plug 'cespare/vim-toml'
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'flazz/vim-colorschemes'
 Plug 'goerz/jupytext.vim'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-maktaba'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'jvirtanen/vim-hcl'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'lervag/vimtex'
 Plug 'letorbi/vim-colors-modern-borland'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'mattn/vim-lsp-settings'
 Plug 'motus/pig.vim'
 Plug 'noahfrederick/vim-hemisu'
 Plug 'noahfrederick/vim-noctu'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'rhysd/git-messenger.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'skywind3000/vim-keysound'
@@ -42,7 +45,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vmchale/polyglot-vim'
-Plug 'lervag/vimtex'
 Plug 'zah/nim.vim'
 
 " Plug 'editorconfig/editorconfig-vim'
@@ -173,4 +175,47 @@ set undodir=~/.vim/undodir
 set nofoldenable    " disable folding
 
 let g:rustfmt_autosave = 1
+
+
+" via: https://github.com/prabirshrestha/vim-lsp
+" pip install --user python-language-server
+
+
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
+    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
+
+    let g:lsp_format_sync_timeout = 1000
+    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
