@@ -58,9 +58,11 @@ function getcertnames() {
 
 # Manually remove a downloaded app or file from the quarantine
 function unquarantine() {
-    for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
-        xattr -r -d "$attribute" "$@"
-    done
+    if [ $(command -v xattr) ] && [ $OSTYPE == "darwin" ]; then
+        for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
+            xattr -r -d "$attribute" "$@"
+        done
+    fi
 }
 
 function readweb() {
@@ -81,6 +83,7 @@ function worldclock() {
     TOKYO=`TZ=Asia/Tokyo date +"%c (%z %Z)"`
     echo "Berlin             $BERLIN"
     echo "Los Angeles        $LOS_ANGELES"
+    echo "New York           $NEW_YORK"
 }
 
 function ytmp3() {
@@ -102,9 +105,24 @@ function jarexe() {
 }
 
 function lvz() {
+    for cmd in "curl pip jq"; do
+        if [ $(command -v $cmd) ]; then
+            echo "$cmd required"
+            return
+        fi
+    done
     if [ -z "$1" ]; then
         echo "usage: lvz URL"
     else
         curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s | less -F
+    fi
+}
+
+function zworkon() {
+    if [ -z "$1" ]; then
+        echo "usage: zworkon NAME"
+    else
+        z $1
+        workon $1
     fi
 }
