@@ -38,11 +38,14 @@ Plug 'noahfrederick/vim-noctu'
 Plug 'rhysd/git-messenger.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'skywind3000/vim-keysound'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vmchale/polyglot-vim'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
 Plug 'zah/nim.vim'
 
 " Plug 'editorconfig/editorconfig-vim'
@@ -148,9 +151,9 @@ set splitright
 highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
-" colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Eighties
 set background=dark
-colorscheme space_vim_theme
+"colorscheme space_vim_theme
 " colorscheme Light
 " colorscheme hemisu
 
@@ -217,3 +220,5 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+" local
+autocmd BufRead /home/tir/code/miku/vary/queries/* setlocal ft=go
