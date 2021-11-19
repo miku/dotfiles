@@ -105,8 +105,8 @@ function jarexe() {
 }
 
 function lvz() {
-    for cmd in "curl pip jq"; do
-        if [ $(command -v $cmd) ]; then
+    for cmd in curl pip jq; do
+        if [ ! $(command -v $cmd) ]; then
             echo "$cmd required"
             return
         fi
