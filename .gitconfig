@@ -46,7 +46,7 @@
     ci = commit
     co = checkout
     br = branch
-    # hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hi = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     hist = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
     charts = shortlog -sn
     todo = grep --heading --break --ignore-case -e ' FIX: *' -e ' TODO: *' -e ' XXX: *'
