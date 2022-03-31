@@ -222,3 +222,13 @@ augroup END
 
 " local
 autocmd BufRead /home/tir/code/miku/vary/queries/* setlocal ft=go
+
+" a minimal fold style
+set foldmethod=indent
+set foldlevel=1
+set foldclose=all
+
+" zo - opens folds
+" zc - closes fold
+" zm - increases auto fold depth
+" zr - reduces auto fold depth
