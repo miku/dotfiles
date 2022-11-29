@@ -142,3 +142,6 @@ if [ $? -eq 0 ]; then
 fi
 
 alias extip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# microk8s
+alias mkctl="microk8s kubectl"
