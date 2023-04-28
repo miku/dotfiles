@@ -48,6 +48,7 @@ Plug 'vmchale/polyglot-vim'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 Plug 'zah/nim.vim'
+Plug 'ziglang/zig.vim'
 
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
