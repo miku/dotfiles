@@ -106,4 +106,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # atuin
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+[[ -f ~/.bash-preexec.sh ]] && eval "$(atuin init bash)"
 
