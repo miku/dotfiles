@@ -104,3 +104,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 [ -d "$HOME/code/so-fancy/diff-so-fancy" ] && export PATH="$PATH:$HOME/code/so-fancy/diff-so-fancy"
 
+# atuin
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+
