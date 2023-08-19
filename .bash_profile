@@ -107,7 +107,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [ -d "$HOME/code/so-fancy/diff-so-fancy" ] && export PATH="$PATH:$HOME/code/so-fancy/diff-so-fancy"
 
 # atuin
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-if is_interactive_shell; then
-        [[ -f ~/.bash-preexec.sh ]] && eval "$(atuin init bash)"
-fi
+# [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+# if is_interactive_shell; then
+#         [[ -f ~/.bash-preexec.sh ]] && eval "$(atuin init bash)"
+# fi
