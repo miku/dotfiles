@@ -15,7 +15,7 @@ function sync() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude "install.sh" \
+		--exclude "install" \
 		--exclude "Makefile" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
