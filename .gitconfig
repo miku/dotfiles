@@ -6,7 +6,6 @@
     email = martin.czygan@gmail.com
 
 [core]
-
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
@@ -38,7 +37,6 @@
     autoclrf = false
 
 [alias]
-
     ll = log --pretty=oneline -n 20 --graph --abbrev-commit
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     st = status
@@ -54,7 +52,6 @@
     ls-untracked = ls-files . --exclude-standard --others
 
 [apply]
-
     # Detect whitespace errors when applying a patch
     whitespace = fix
 
@@ -65,19 +62,16 @@
     rebase = false
 
 [color]
-
     # Use colors in Git commands that are capable of colored output when
     # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
     ui = auto
 
 [color "branch"]
-
     current = yellow reverse
     local = yellow
     remote = green
 
 [color "diff"]
-
     meta = yellow bold
     frag = magenta bold
     old = red
@@ -85,50 +79,39 @@
 
 
 [color "status"]
-
     added = yellow
     changed = green
     untracked = cyan
 
 [help]
-
     # Automatically correct and execute mistyped commands
     autocorrect = 0
 
 [merge]
-
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 
 [push]
-
     default = simple
     followTags = true
 
 [diff]
-
     renames = copies
 
 [diff "pdf"]
-
     textconv = pdfinfo
 
 [diff "bin"]
-
     textconv = hexdump -v -C
 
 [diff "image"]
-
     command = git-imgdiff
 
 [diff "pandoc"]
-
     textconv = pandoc --to=markdown
     prompt = false
 
-
 [instaweb]
-
     local = true
     httpd = webrick
     port = 1234
@@ -142,13 +125,6 @@
 
 [url "https://bitbucket.org/"]
     insteadOf = bb:
-
-# image diffs: https://akikoskinen.info/image-diffs-with-git/
-#
-# [~]$ git config --global diff.image.command '~/bin/git-imgdiff'
-# [~]$ cat ~/bin/git-imgdiff
-#     #!/bin/sh
-#     #compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title "$1" -
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
