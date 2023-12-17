@@ -1,6 +1,4 @@
-# Install virtualenvwrapper beforehand
-# sudo easy_install pip
-# sudo pip install virtualenvwrapper
+# Install pyenv and virtualenvwrapper first.
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     # Mainstream.
@@ -26,3 +24,5 @@ elif [ -f $HOME/.pyenv/bin/pyenv -a -f $HOME/.pyenv/versions/$(pyenv version-nam
    export WORKON_HOME=$HOME/.virtualenvs
 fi
 
+
+export PIP_REQUIRE_VIRTUALENV=true
