@@ -22,7 +22,7 @@ elif [ -f $HOME/.pyenv/bin/pyenv -a -f $HOME/.pyenv/versions/$(pyenv version-nam
    # More generic hack.
    source $HOME/.pyenv/versions/$(pyenv version-name)/bin/virtualenvwrapper.sh
    export WORKON_HOME=$HOME/.virtualenvs
-elif [ -f $HOME/.local/bin/virtualenvwrapper.sh ]
+elif [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
    source $HOME/.local/bin/virtualenvwrapper.sh
    export WORKON_HOME=$HOME/.virtualenvs
 fi
