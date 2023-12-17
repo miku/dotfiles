@@ -1,8 +1,5 @@
 #/bin/bash
 
-set -eu
-set -o pipefail
-
 stty -ixon # https://unix.stackexchange.com/a/72092/376
 
 export PATH="$HOME/bin:$PATH"
