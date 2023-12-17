@@ -34,7 +34,6 @@
     pager = less --tabs=4 -RFX
     editor = vim
     preloadindex = true
-    fsyncobjectfiles = true
     compression = 9
     autoclrf = false
 

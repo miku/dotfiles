@@ -1,128 +1,136 @@
 #!/usr/bin/env bash
 
 # Use Git’s colored diff when available
-hash git &>/dev/null;
+hash git &>/dev/null
 if [ $? -eq 0 ]; then
-    function diff() {
-        git diff --no-index --color-words "$@";
-    }
-fi;
+        function diff() {
+                git diff --no-index --color-words "$@"
+        }
+fi
 
 # Create a data URL from a file
 function dataurl() {
-    local mimeType=$(file -b --mime-type "$1");
-    if [[ $mimeType == text/* ]]; then
-        mimeType="${mimeType};charset=utf-8";
-    fi
-    echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
+        local mimeType=$(file -b --mime-type "$1")
+        if [[ $mimeType == text/* ]]; then
+                mimeType="${mimeType};charset=utf-8"
+        fi
+        echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
 }
 
 # Run `dig` and display the most useful info
 function digga() {
-    dig +nocmd "$1" any +multiline +noall +answer;
+        dig +nocmd "$1" any +multiline +noall +answer
 }
 
 # Show all the names (CNs and SANs) listed in the SSL certificate
 # for a given domain
 function getcertnames() {
-    if [ -z "${1}" ]; then
-        echo "ERROR: No domain specified.";
-        return 1;
-    fi;
+        if [ -z "${1}" ]; then
+                echo "ERROR: No domain specified."
+                return 1
+        fi
 
-    local domain="${1}";
-    echo "Testing ${domain}…";
-    echo ""; # newline
+        local domain="${1}"
+        echo "Testing ${domain}…"
+        echo "" # newline
 
-    local tmp=$(echo -e "GET / HTTP/1.0\nEOT" \
-        | openssl s_client -connect "${domain}:443" -servername "${domain}" 2>&1);
+        local tmp=$(echo -e "GET / HTTP/1.0\nEOT" |
+                openssl s_client -connect "${domain}:443" -servername "${domain}" 2>&1)
 
-    if [[ "${tmp}" = *"-----BEGIN CERTIFICATE-----"* ]]; then
-        local certText=$(echo "${tmp}" \
-            | openssl x509 -text -certopt "no_aux, no_header, no_issuer, no_pubkey, \
-            no_serial, no_sigdump, no_signame, no_validity, no_version");
-        echo "Common Name:";
-        echo ""; # newline
-        echo "${certText}" | grep "Subject:" | sed -e "s/^.*CN=//" | sed -e "s/\/emailAddress=.*//";
-        echo ""; # newline
-        echo "Subject Alternative Name(s):";
-        echo ""; # newline
-        echo "${certText}" | grep -A 1 "Subject Alternative Name:" \
-            | sed -e "2s/DNS://g" -e "s/ //g" | tr "," "\n" | tail -n +2;
-        return 0;
-    else
-        echo "ERROR: Certificate not found.";
-        return 1
-    fi
+        if [[ "${tmp}" = *"-----BEGIN CERTIFICATE-----"* ]]; then
+                local certText=$(echo "${tmp}" |
+                        openssl x509 -text -certopt "no_aux, no_header, no_issuer, no_pubkey, \
+            no_serial, no_sigdump, no_signame, no_validity, no_version")
+                echo "Common Name:"
+                echo "" # newline
+                echo "${certText}" | grep "Subject:" | sed -e "s/^.*CN=//" | sed -e "s/\/emailAddress=.*//"
+                echo "" # newline
+                echo "Subject Alternative Name(s):"
+                echo "" # newline
+                echo "${certText}" | grep -A 1 "Subject Alternative Name:" |
+                        sed -e "2s/DNS://g" -e "s/ //g" | tr "," "\n" | tail -n +2
+                return 0
+        else
+                echo "ERROR: Certificate not found."
+                return 1
+        fi
 }
 
 # Manually remove a downloaded app or file from the quarantine
 function unquarantine() {
-    if [ $(command -v xattr) ] && [ $OSTYPE == "darwin" ]; then
-        for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
-            xattr -r -d "$attribute" "$@"
-        done
-    fi
+        if [ $(command -v xattr) ] && [ $OSTYPE == "darwin" ]; then
+                for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
+                        xattr -r -d "$attribute" "$@"
+                done
+        fi
 }
 
 function readweb() {
-    links -dump "$1" | less
+        links -dump "$1" | less
 }
 
 function worldclock() {
-    ADDIS_ABABA=`TZ=Africa/Addis_Ababa date +"%c (%z %Z)"`
-    BERLIN=`TZ=Europe/Berlin date +"%c (%z %Z)"`
-    CHICAGO=`TZ=America/Chicago date +"%c (%z %Z)"`
-    HONK_KONG=`TZ=Asia/Hong_Kong date +"%c (%z %Z)"`
-    LONDON=`TZ=Europe/London date +"%c (%z %Z)"`
-    LOS_ANGELES=`TZ=America/Los_Angeles date +"%c (%z %Z)"`
-    MOSCOW=`TZ=Europe/Moscow date +"%c (%z %Z)"`
-    NEW_YORK=`TZ=America/New_York date +"%c (%z %Z)"`
-    SOFIA=`TZ=Europe/Sofia date +"%c (%z %Z)"`
-    SYDNEY=`TZ=Australia/Sydney date +"%c (%z %Z)"`
-    TOKYO=`TZ=Asia/Tokyo date +"%c (%z %Z)"`
-    echo "Berlin             $BERLIN"
-    echo "Los Angeles        $LOS_ANGELES"
-    echo "New York           $NEW_YORK"
+        ADDIS_ABABA=$(TZ=Africa/Addis_Ababa date +"%c (%z %Z)")
+        BERLIN=$(TZ=Europe/Berlin date +"%c (%z %Z)")
+        CHICAGO=$(TZ=America/Chicago date +"%c (%z %Z)")
+        HONK_KONG=$(TZ=Asia/Hong_Kong date +"%c (%z %Z)")
+        LONDON=$(TZ=Europe/London date +"%c (%z %Z)")
+        LOS_ANGELES=$(TZ=America/Los_Angeles date +"%c (%z %Z)")
+        MOSCOW=$(TZ=Europe/Moscow date +"%c (%z %Z)")
+        NEW_YORK=$(TZ=America/New_York date +"%c (%z %Z)")
+        SOFIA=$(TZ=Europe/Sofia date +"%c (%z %Z)")
+        SYDNEY=$(TZ=Australia/Sydney date +"%c (%z %Z)")
+        TOKYO=$(TZ=Asia/Tokyo date +"%c (%z %Z)")
+        echo "Berlin             $BERLIN"
+        echo "Los Angeles        $LOS_ANGELES"
+        echo "New York           $NEW_YORK"
 }
 
 function ytmp3() {
-    hash youtube-dl 2>/dev/null || { echo >&2 "youtube-dl required"; exit 1; }
-    youtube-dl -x --audio-format mp3 "$1"
+        hash youtube-dl 2>/dev/null || {
+                echo >&2 "youtube-dl required"
+                exit 1
+        }
+        youtube-dl -x --audio-format mp3 "$1"
 }
 
 function jarexe() {
-    if [ -z "$1" ]; then
-        echo "usage: jarexe JARFILE"
-    else
-        filename=$(mktemp)
-        echo '#!/bin/sh' >> "$filename"
-        echo 'exec java -server -Xmx1024m -Xms1024m -jar $0 "$@"' >> "$filename"
-        cat "$1" >> "$filename"
-        chmod +x "$filename"
-        echo "The $1 has successfully been turned into an executable: $filename"
-    fi
+        if [ -z "$1" ]; then
+                echo "usage: jarexe JARFILE"
+        else
+                filename=$(mktemp)
+                echo '#!/bin/sh' >>"$filename"
+                echo 'exec java -server -Xmx1024m -Xms1024m -jar $0 "$@"' >>"$filename"
+                cat "$1" >>"$filename"
+                chmod +x "$filename"
+                echo "The $1 has successfully been turned into an executable: $filename"
+        fi
 }
 
 function lvz() {
-    for cmd in curl pip jq; do
-        if [ ! $(command -v $cmd) ]; then
-            echo "$cmd required"
-            return
+        for cmd in curl pip jq; do
+                if [ ! $(command -v $cmd) ]; then
+                        echo "$cmd required"
+                        return
+                fi
+        done
+        if [ -z "$1" ]; then
+                echo "usage: lvz URL"
+        else
+                curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s | less -F
         fi
-    done
-    if [ -z "$1" ]; then
-        echo "usage: lvz URL"
-    else
-        curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s | less -F
-    fi
 }
 
 function zworkon() {
-    if [ -z "$1" ]; then
-        echo "usage: zworkon NAME"
-    else
-        _z $1 2> /dev/null
-        workon $1
-    fi
+        if [ -z "$1" ]; then
+                echo "usage: zworkon NAME"
+        else
+                _z $1 2>/dev/null
+                workon $1
+        fi
+}
+
+function is_interactive_shell() {
+        # https://www.gnu.org/software/bash/manual/html_node/Is-this-Shell-Interactive_003f.html
+        [[ "$-" =~ "i" ]]
 }
