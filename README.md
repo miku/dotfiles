@@ -1,5 +1,4 @@
-Dotfiles
-========
+# hello, dotfiles!
 
 Minimal setup.
 
@@ -7,10 +6,10 @@ Minimal setup.
 $ git clone git@github.com:miku/dotfiles.git ~/.dotfiles
 ```
 
-Review files, commit, then sync with:
+Review files, commit, then sync with (will overwrite existing files):
 
 ```
-~/.dotfiles/bootstrap.sh -f
+~/install
 ```
 
 Set default browser.
@@ -21,21 +20,20 @@ $ open -a "Firefox" --args --make-default-browser
 
 On MacOS, run `.cask`, `.Brewfile` and `.macos`.
 
-Post-install
-------------
+Add persistent changes to the repo first, then sync again. Put local extras
+into `~/.extra` which will be sourced.
 
-*Ruby*
+## Vim
 
-Install a current ruby via `rbenv`.
+Using [vim-plug](https://github.com/junegunn/vim-plug), need to install this
+first, before we can `:PlugInstall` extras.
 
-*LaTeX*
+## pyenv
 
-```
-brew cask install mactex
-```
+Use pyenv for Python version management. Use vanilla `-m venv` for venv
+management, e.g. via `mkvenv` alias.
 
-TODO
-----
+## Go and rust
 
-* Python and Jupyter
-* Android, iOS, Xcode
+Install default toolchains.
+
