@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+set -eu
+set -o pipefail
+
 # Detect which `ls` flavor is in use.
 if ls --color >/dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -9,12 +12,7 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
-if hash exa 2>/dev/null; then
-    # exa: https://github.com/ogham/exa/issues/517
-	alias ll="exa -la"
-else
-	alias ll="ls -lahF ${colorflag}"
-fi
+alias ll="ls -lahF ${colorflag}"
 
 # List all files colorized in long format, including dot files.
 alias la="ls -laF ${colorflag}"
@@ -48,10 +46,6 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
-# Kill all the tabs in Chrome to free up memory.
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
 # Reload the shell (i.e. invoke as a login shell).
 alias reload="exec ${SHELL} -l"
 
@@ -61,6 +55,7 @@ alias bc='bc -lq'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# like MacOS pbcopy and pbpaste (https://ss64.com/osx/pbcopy.html)
 if [ "$(uname -s)" == "Linux" ]; then
 	command -v xsel >/dev/null 2>&1
 	if [ $? -eq 0 ]; then
@@ -119,7 +114,7 @@ if [ "$(uname -s)" == "Darwin" ]; then
 fi
 
 alias musicforprogramming='vlc --intf ncurses $(curl -s https://musicforprogramming.net/rss.php | xmlcutty -path /rss/channel/item/comments -rename "\n" | grep -v ^$ | fzf)'
-alias bash-colors='/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/gawin/bash-colors-256/master/colors)"'
+alias bash-colors='/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/miku/bash-colors-256/master/colors)"'
 
 # https://stackoverflow.com/q/4996090/89391
 alias R='R --no-save'
@@ -127,8 +122,6 @@ alias R='R --no-save'
 if [ "$(uname)" == "Linux" ]; then
 	alias open="xdg-open"
 fi
-
-# alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 alias asciicast2gif='docker run --memory=12G --rm -v $PWD:/data asciinema/asciicast2gif'
 
@@ -138,7 +131,7 @@ alias cdtmp='cd $(mktemp -d)'
 
 command -v pngphoon >/dev/null 2>&1
 if [ $? -eq 0 ]; then
-    alias moonimg='T="$(mktemp)"; pngphoon -w 800 -h 800 -f "$T" && catimg -w 120 "$T" && rm -f "$T"'
+    alias moonimg='T="$(mktemp)"; pngphoon -w 800 -h 800 -f "$T" && catimg -w 180 "$T" && rm -f "$T"'
 fi
 
 alias extip="dig +short myip.opendns.com @resolver1.opendns.com"
