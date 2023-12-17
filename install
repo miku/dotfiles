@@ -14,8 +14,9 @@ function sync() {
         --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
+		--exclude "Brewfile" \
+		--exclude ".macos" \
 		--exclude "install" \
-		--exclude "Makefile" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~
