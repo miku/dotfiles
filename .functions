@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+set -eu
+set -o pipefail
 
 # Use Git’s colored diff when available
 hash git &>/dev/null
@@ -65,6 +68,7 @@ function unquarantine() {
         fi
 }
 
+# page web text
 function readweb() {
         links -dump "$1" | less
 }
@@ -76,24 +80,26 @@ function worldclock() {
         HONK_KONG=$(TZ=Asia/Hong_Kong date +"%c (%z %Z)")
         LONDON=$(TZ=Europe/London date +"%c (%z %Z)")
         LOS_ANGELES=$(TZ=America/Los_Angeles date +"%c (%z %Z)")
+        SAN_FRANCISCO=$(TZ=America/Los_Angeles date +"%c (%z %Z)")
         MOSCOW=$(TZ=Europe/Moscow date +"%c (%z %Z)")
         NEW_YORK=$(TZ=America/New_York date +"%c (%z %Z)")
         SOFIA=$(TZ=Europe/Sofia date +"%c (%z %Z)")
         SYDNEY=$(TZ=Australia/Sydney date +"%c (%z %Z)")
         TOKYO=$(TZ=Asia/Tokyo date +"%c (%z %Z)")
         echo "Berlin             $BERLIN"
-        echo "Los Angeles        $LOS_ANGELES"
         echo "New York           $NEW_YORK"
+        echo "San Francisco      $SAN_FRANCISCO"
 }
 
 function ytmp3() {
-        hash youtube-dl 2>/dev/null || {
-                echo >&2 "youtube-dl required"
+        hash yt-dlp 2>/dev/null || {
+                echo >&2 "yt-dlp required"
                 exit 1
         }
-        youtube-dl -x --audio-format mp3 "$1"
+        yt-dlp -x --audio-format mp3 "$1"
 }
 
+# jarexe turns a jar file into an single executable
 function jarexe() {
         if [ -z "$1" ]; then
                 echo "usage: jarexe JARFILE"
@@ -104,29 +110,6 @@ function jarexe() {
                 cat "$1" >>"$filename"
                 chmod +x "$filename"
                 echo "The $1 has successfully been turned into an executable: $filename"
-        fi
-}
-
-function lvz() {
-        for cmd in curl pip jq; do
-                if [ ! $(command -v $cmd) ]; then
-                        echo "$cmd required"
-                        return
-                fi
-        done
-        if [ -z "$1" ]; then
-                echo "usage: lvz URL"
-        else
-                curl -sL "$1" | pup 'script[type="application/ld+json"] text{}' | grep NewsArticle | jq -rc .articleBody | fold -s | less -F
-        fi
-}
-
-function zworkon() {
-        if [ -z "$1" ]; then
-                echo "usage: zworkon NAME"
-        else
-                _z $1 2>/dev/null
-                workon $1
         fi
 }
 
