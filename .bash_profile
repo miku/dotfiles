@@ -89,3 +89,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # diff-so-fancy
 [ -d "$HOME/code/so-fancy/diff-so-fancy" ] && export PATH="$PATH:$HOME/code/so-fancy/diff-so-fancy"
+
+# conda
+command -v register-python-argcomplete >/dev/null 2>&1 && eval "$(register-python-argcomplete conda)"
+
