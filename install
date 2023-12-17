@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for req in rsync git; do
+for req in rsync; do
 	command -v $req >/dev/null 2>&1 || {
 		echo >&2 "$req required"
 		exit 1
@@ -9,10 +9,9 @@ done
 
 cd "$(dirname "${BASH_SOURCE}")"
 
-git pull origin master
-
 function sync() {
-	rsync --exclude ".git/" \
+	rsync -q \
+        --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "install" \
