@@ -1,10 +1,15 @@
+#/bin/bash
+
+set -eu
+set -o pipefail
+
 stty -ixon # https://unix.stackexchange.com/a/72092/376
 
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-# Use GNU coreutils.
+# Use GNU coreutils (MacOS, wanted to prefer e.g. much faster GNU sort)
 [ -d /usr/local/opt/coreutils/libexec/gnubin ] && export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Load the shell dotfiles, and then some:
@@ -59,32 +64,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f "/usr/local/etc/profile.d/z.sh" ] && source "/usr/local/etc/profile.d/z.sh"
 [ -f "$HOME/code/rupa/z/z.sh" ] && source "$HOME/code/rupa/z/z.sh"
 
-# Ruby sanity via rbenv.
-# command -v rbenv &> /dev/null; [[ $? -eq 0 ]] && eval "$(rbenv init -)"
-
-# FZF!
-# [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
-
-# command -v direnv &> /dev/null; [[ $? -eq 0 ]] && eval "$(direnv hook bash)"
-
-# PyEnv.
+# pyenv
 command -v pyenv &>/dev/null
 [[ $? -eq 0 ]] && eval "$(pyenv init -)"
-# command -v pyenv &> /dev/null; [[ $? -eq 0 ]] && pyenv virtualenvwrapper
 
-# ROOT (https://root.cern.ch/)
-[ -f "/usr/local/bin/thisroot.sh" ] && source "/usr/local/bin/thisroot.sh"
-
+# pandoc completion
 command -v pandoc &>/dev/null
 [[ $? -eq 0 ]] && eval "$(pandoc --bash-completion)"
-
-[ -d "/usr/local/cuda-9.0/bin" ] && export PATH=/usr/local/cuda-9.0/bin${PATH:+:$PATH} && export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
-[ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ] && source $HOME/anaconda3/etc/profile.d/conda.sh
-
-# Jira completion, https://github.com/go-jira/jira
-command -v jira &>/dev/null
-[[ $? -eq 0 ]] && eval "$(jira --completion-script-bash)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -104,10 +90,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [ -d "$HOME/opt/spark" ] && export SPARK_HOME="$HOME/opt/spark"
 [ -d "$SPARK_HOME/bin" ] && export PATH="$PATH:$SPARK_HOME/bin"
 
+# diff-so-fancy
 [ -d "$HOME/code/so-fancy/diff-so-fancy" ] && export PATH="$PATH:$HOME/code/so-fancy/diff-so-fancy"
-
-# atuin
-# [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-# if is_interactive_shell; then
-#         [[ -f ~/.bash-preexec.sh ]] && eval "$(atuin init bash)"
-# fi
