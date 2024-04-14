@@ -114,3 +114,7 @@ function is_interactive_shell() {
         # https://www.gnu.org/software/bash/manual/html_node/Is-this-Shell-Interactive_003f.html
         [[ "$-" =~ "i" ]]
 }
+
+function nbless() {
+    jupyter nbconvert --stdout --to markdown "$1" | glow -p
+}
