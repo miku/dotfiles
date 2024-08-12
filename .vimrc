@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'Chiel92/vim-autoformat'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'NoahTheDuke/vim-just'
 Plug 'airblade/vim-gitgutter'
 Plug 'caglartoklu/borlandp.vim'
 Plug 'cespare/vim-toml'
@@ -24,6 +25,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'jvirtanen/vim-hcl'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'

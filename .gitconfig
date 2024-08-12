@@ -111,6 +111,10 @@
     textconv = pandoc --to=markdown
     prompt = false
 
+[diff "json"]
+    textconv = jq .
+    prompt = false
+
 [instaweb]
     local = true
     httpd = webrick

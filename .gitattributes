@@ -4,3 +4,4 @@
 *.JPG diff=image
 *.png diff=image
 *.docx diff=pandoc
+*.json diff=json
