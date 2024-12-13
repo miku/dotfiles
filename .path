@@ -2,4 +2,5 @@
 
 [[ -d /usr/local/opt/go/libexec/bin ]] && export PATH=$PATH:/usr/local/opt/go/libexec/bin
 [[ -d "$HOME/go/bin" ]] && export PATH=$HOME/go/bin:$PATH
+[[ -d "$HOME/.local/bin" ]] && export PATH=$HOME/.local/bin:$PATH
 [[ -d "$HOME/opt/pig/bin" ]] && export PATH=$HOME/opt/pig/bin:$PATH
