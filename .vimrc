@@ -9,7 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Chiel92/vim-autoformat'
+Plug 'vim-autoformat/vim-autoformat'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'NoahTheDuke/vim-just'
 Plug 'airblade/vim-gitgutter'
