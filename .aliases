@@ -136,3 +136,4 @@ alias extip="dig +short myip.opendns.com @resolver1.opendns.com"
 # microk8s
 alias mkctl="microk8s kubectl"
 
+alias peste="perf stat -e branches,branch-misses,cache-references,cache-misses,cycles,instructions"
