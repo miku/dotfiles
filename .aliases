@@ -138,5 +138,5 @@ alias mkctl="microk8s kubectl"
 
 alias peste="perf stat -e branches,branch-misses,cache-references,cache-misses,cycles,instructions"
 
-alias screenie="wmctrl -i -a $(wmctrl -lp | fzf -m | awk '{print $1}') && gnome-screenshot -w -f screenshot-$(date +\"%Y-%m-%d-%H%M%S"\).png"
+alias screenie="wmctrl -i -a $(wmctrl -lp | fzf -m | awk '{print $1}') && gnome-screenshot -w -f screenshot-$(date +\"%Y-%m-%d-%H%M%S\").png"
 
