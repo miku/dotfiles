@@ -17,9 +17,9 @@ Plug 'cespare/vim-toml'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'flazz/vim-colorschemes'
 Plug 'goerz/jupytext.vim'
-Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -28,7 +28,8 @@ Plug 'junegunn/seoul256.vim'
 Plug 'jvirtanen/vim-hcl'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'tag': 'v2.15' }
 Plug 'letorbi/vim-colors-modern-borland'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'majutsushi/tagbar'
@@ -126,9 +127,9 @@ command! TrimWhitespace call TrimWhitespace()
 autocmd BufWritePre * :call TrimWhitespace()
 
 " Autoformat
-au BufWrite *.html :Autoformat
-au BufWrite *.css :Autoformat
-au BufWrite *.js :Autoformat
+" au BufWrite *.html :Autoformat
+" au BufWrite *.css :Autoformat
+" au BufWrite *.js :Autoformat
 " au BufWrite *.py :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
@@ -192,7 +193,7 @@ augroup autoformat_settings
   autocmd FileType julia AutoFormatBuffer JuliaFormatter
   autocmd FileType kotlin AutoFormatBuffer ktfmt
   autocmd FileType lua AutoFormatBuffer luaformatterfiveone
-  autocmd FileType markdown AutoFormatBuffer prettier
+  " autocmd FileType markdown AutoFormatBuffer prettier
   autocmd FileType ocaml AutoFormatBuffer ocamlformat
   autocmd FileType python AutoFormatBuffer yapf
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
@@ -261,3 +262,18 @@ set foldclose=all
 " zc - closes fold
 " zm - increases auto fold depth
 " zr - reduces auto fold depth
+
+
+" ALE
+" let g:ale_fixers = {
+"     \   'javascript': ['eslint'],
+"     \}
+"
+" let g:ale_fix_on_save = 1
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+" let g:ale_echo_msg_error_str = 'E'
+" let g:ale_echo_msg_warning_str = 'W'
+" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_python_flake8_options = '--max-line-length 88 --extend-ignore=E203'
+"
