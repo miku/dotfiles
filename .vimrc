@@ -187,7 +187,7 @@ augroup autoformat_settings
   autocmd FileType go AutoFormatBuffer gofmt
   autocmd FileType haskell AutoFormatBuffer ormolu
   " Alternative for web languages: prettier
-  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  " autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
   autocmd FileType java AutoFormatBuffer google-java-format
   autocmd FileType jsonnet AutoFormatBuffer jsonnetfmt
   autocmd FileType julia AutoFormatBuffer JuliaFormatter
