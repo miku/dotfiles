@@ -123,3 +123,4 @@ function screenie() {
     # needs wmctrl, fzf, awk and gnome-screenshot
     wmctrl -i -a $(wmctrl -lp | fzf -m | awk '{print $1}') && gnome-screenshot -w -f screenshot-$(date +\"%Y-%m-%d-%H%M%S\").png
 }
+

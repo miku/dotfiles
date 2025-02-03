@@ -1,0 +1,9 @@
+#!/bin/bash
+
+command -v tabulate >/dev/null 2>&1 || { echo >&2 "tabulate required"; exit 1; }
+
+for branch in `git branch -r | grep -v HEAD`; do
+    echo -e $branch "\t" `git show --format="%ai %ar by %an" $branch | head -n 1`;
+done | sort -r | tabulate -f pipe -s '\t'
+
+

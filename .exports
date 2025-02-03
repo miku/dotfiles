@@ -63,3 +63,4 @@ export PATH=$PATH:/usr/lib/go/misc/wasm/
 # experiments
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && source $HOME/.nix-profile/etc/profile.d/nix.sh
 [ -d $HOME/opt/nvim-linux64/bin ] && export PATH=$PATH:$HOME/opt/nvim-linux64/bin
+
