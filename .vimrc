@@ -12,45 +12,45 @@ call plug#begin('~/.vim/plugged')
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'NoahTheDuke/vim-just'
 Plug 'airblade/vim-gitgutter'
-Plug 'caglartoklu/borlandp.vim'
+" Plug 'caglartoklu/borlandp.vim'
 Plug 'cespare/vim-toml'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
-Plug 'flazz/vim-colorschemes'
-Plug 'goerz/jupytext.vim'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
-Plug 'google/vim-maktaba'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'goerz/jupytext.vim'
+" Plug 'google/vim-codefmt'
+" Plug 'google/vim-glaive'
+" Plug 'google/vim-maktaba'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'jvirtanen/vim-hcl'
+" Plug 'jvirtanen/vim-hcl'
 Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
 " Plug 'lervag/vimtex'
 Plug 'lervag/vimtex', { 'tag': 'v2.15' }
-Plug 'letorbi/vim-colors-modern-borland'
+" Plug 'letorbi/vim-colors-modern-borland'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'motus/pig.vim'
 Plug 'noahfrederick/vim-hemisu'
-Plug 'noahfrederick/vim-noctu'
+" Plug 'noahfrederick/vim-noctu'
 Plug 'rhysd/git-messenger.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'skywind3000/vim-keysound'
+" Plug 'skywind3000/vim-keysound'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
-Plug 'zah/nim.vim'
-Plug 'ziglang/zig.vim'
+" Plug 'zah/nim.vim'
+" Plug 'ziglang/zig.vim'
 
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
@@ -155,11 +155,12 @@ set splitright
 highlight SpecialKey ctermfg=8
 highlight LineNr ctermfg=darkgrey
 
-colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night-Eighties
 set background=dark
-"colorscheme space_vim_theme
+" colorscheme space_vim_theme
 " colorscheme Light
-" colorscheme hemisu
+colorscheme hemisu
+" colorscheme seoul256
 
 nnoremap 'c :Files $HOME/code/miku<CR>
 nnoremap 'g :Files $HOME/go/src<CR>
