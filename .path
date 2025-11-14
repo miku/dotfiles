@@ -4,3 +4,4 @@
 [[ -d "$HOME/go/bin" ]] && export PATH=$HOME/go/bin:$PATH
 [[ -d "$HOME/.local/bin" ]] && export PATH=$HOME/.local/bin:$PATH
 [[ -d "$HOME/opt/pig/bin" ]] && export PATH=$HOME/opt/pig/bin:$PATH
+[[ -d "$HOME/code/ggml-org/llama.cpp/build/bin" ]] && export PATH=$HOME/code/ggml-org/llama.cpp/build/bin/:$PATH
