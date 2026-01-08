@@ -12,14 +12,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'NoahTheDuke/vim-just'
 Plug 'airblade/vim-gitgutter'
-" Plug 'caglartoklu/borlandp.vim'
+Plug 'caglartoklu/borlandp.vim'
 Plug 'cespare/vim-toml'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
-" Plug 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 " Plug 'goerz/jupytext.vim'
 " Plug 'google/vim-codefmt'
 " Plug 'google/vim-glaive'
 " Plug 'google/vim-maktaba'
+Plug 'Chiel92/vim-autoformat'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -127,10 +128,10 @@ command! TrimWhitespace call TrimWhitespace()
 autocmd BufWritePre * :call TrimWhitespace()
 
 " Autoformat
-" au BufWrite *.html :Autoformat
-" au BufWrite *.css :Autoformat
-" au BufWrite *.js :Autoformat
-" au BufWrite *.py :Autoformat
+au BufWrite *.html :Autoformat
+au BufWrite *.css :Autoformat
+au BufWrite *.js :Autoformat
+au BufWrite *.py :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
