@@ -196,7 +196,7 @@ augroup autoformat_settings
   autocmd FileType lua AutoFormatBuffer luaformatterfiveone
   " autocmd FileType markdown AutoFormatBuffer prettier
   autocmd FileType ocaml AutoFormatBuffer ocamlformat
-  autocmd FileType python AutoFormatBuffer yapf
+  autocmd FileType python AutoFormatBuffer ruff format
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
   autocmd FileType ruby AutoFormatBuffer rubocop
   autocmd FileType rust AutoFormatBuffer rustfmt
