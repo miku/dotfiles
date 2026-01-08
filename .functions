@@ -116,11 +116,28 @@ function is_interactive_shell() {
 }
 
 function nbless() {
-    jupyter nbconvert --stdout --to markdown "$1" | glow -p
+        jupyter nbconvert --stdout --to markdown "$1" | glow -p
 }
 
 function screenie() {
-    # needs wmctrl, fzf, awk and gnome-screenshot
-    wmctrl -i -a $(wmctrl -lp | fzf -m | awk '{print $1}') && gnome-screenshot -w -f screenshot-$(date +"%Y-%m-%d-%H%M%S").png
+        # needs wmctrl, fzf, awk and gnome-screenshot
+        wmctrl -i -a $(wmctrl -lp | fzf -m | awk '{print $1}') && gnome-screenshot -w -f screenshot-$(date +"%Y-%m-%d-%H%M%S").png
 }
 
+function cplastss() {
+        latest=$(find ~/Pictures/Screenshots -maxdepth 1 -type f -printf '%T@ %p\n' | sort -n | tail -n 1 | awk '{ $1=""; print $0 }' | sed 's/^ //')
+        [ -z "$latest" ] && {
+                echo "No files found"
+                return 1
+        }
+
+        ts=$(date -r "$latest" +"%Y-%m-%d-%H%M%S")
+        base="screenshot-$ts"
+
+        if [ $# -gt 0 ]; then
+                safe_suffix=$(echo "$1" | tr ' ' '-' | tr -cd '[:alnum:]-')
+                [ -n "$safe_suffix" ] && base="${base}-${safe_suffix}"
+        fi
+
+        cp "$latest" "${base}.png" && echo "Copied to: ${base}.png"
+}
