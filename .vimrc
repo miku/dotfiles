@@ -17,10 +17,9 @@ Plug 'cespare/vim-toml'
 Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'flazz/vim-colorschemes'
 " Plug 'goerz/jupytext.vim'
-" Plug 'google/vim-codefmt'
-" Plug 'google/vim-glaive'
-" Plug 'google/vim-maktaba'
-Plug 'Chiel92/vim-autoformat'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -31,14 +30,14 @@ Plug 'keith/swift.vim'
 Plug 'leafgarland/typescript-vim'
 " Plug 'lervag/vimtex'
 Plug 'lervag/vimtex', { 'tag': 'v2.15' }
-" Plug 'letorbi/vim-colors-modern-borland'
+Plug 'letorbi/vim-colors-modern-borland'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'motus/pig.vim'
 Plug 'noahfrederick/vim-hemisu'
-" Plug 'noahfrederick/vim-noctu'
+Plug 'noahfrederick/vim-noctu'
 Plug 'rhysd/git-messenger.vim'
 Plug 'rust-lang/rust.vim'
 " Plug 'skywind3000/vim-keysound'
@@ -127,14 +126,6 @@ endfun
 command! TrimWhitespace call TrimWhitespace()
 autocmd BufWritePre * :call TrimWhitespace()
 
-" Autoformat
-au BufWrite *.html :Autoformat
-au BufWrite *.css :Autoformat
-au BufWrite *.js :Autoformat
-au BufWrite *.py :Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
 
 " FZF.
 let g:fzf_tags_command = 'ctags -R'
