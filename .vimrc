@@ -52,6 +52,9 @@ Plug 'xolox/vim-misc'
 " Plug 'zah/nim.vim'
 " Plug 'ziglang/zig.vim'
 
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
 " Plug 'editorconfig/editorconfig-vim'
 " Plug 'qualiabyte/vim-colorstepper'
 call plug#end()
