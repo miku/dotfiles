@@ -83,9 +83,8 @@ let g:lsp_diagnostics_virtual_text_enabled = 0  " no inline text next to the lin
 let g:lsp_diagnostics_signs_enabled = 1         " keep the gutter signs (optional)
 let g:lsp_diagnostics_highlights_enabled = 0    " no underlines/red text in code
 let g:lsp_diagnostics_echo_cursor = 1           " show current line's diag in cmdline
-" or, instead of echo, a floating window on hover:
-" let g:lsp_diagnostics_float_cursor = 1
-let g:lsp_diagnostics_echo_cursor = 1
+" let g:lsp_diagnostics_float_cursor = 1        " alternative: floating popup
+set updatetime=300                              " snappier CursorHold for LSP
 
 
 let g:formatdef_custom_c = '"astyle --mode=c --style=linux --align-pointer=name"'
@@ -242,6 +241,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>rn <plug>(lsp-rename)
     nmap <buffer> [g <plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> <leader>d :LspDocumentDiagnostics<CR>
     nmap <buffer> K <plug>(lsp-hover)
     inoremap <buffer> <expr><c-f> lsp#scroll(+4)
     inoremap <buffer> <expr><c-d> lsp#scroll(-4)
