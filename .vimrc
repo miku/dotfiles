@@ -76,6 +76,17 @@ let g:go_disable_autoinstall = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
+
+
+let g:lsp_diagnostics_enabled = 1               " keep diagnostics computed
+let g:lsp_diagnostics_virtual_text_enabled = 0  " no inline text next to the line
+let g:lsp_diagnostics_signs_enabled = 1         " keep the gutter signs (optional)
+let g:lsp_diagnostics_highlights_enabled = 0    " no underlines/red text in code
+let g:lsp_diagnostics_echo_cursor = 1           " show current line's diag in cmdline
+" or, instead of echo, a floating window on hover:
+" let g:lsp_diagnostics_float_cursor = 1
+
+
 let g:formatdef_custom_c = '"astyle --mode=c --style=linux --align-pointer=name"'
 let g:formatters_c = ['custom_c']
 
