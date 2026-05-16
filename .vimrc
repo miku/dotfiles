@@ -85,6 +85,7 @@ let g:lsp_diagnostics_highlights_enabled = 0    " no underlines/red text in code
 let g:lsp_diagnostics_echo_cursor = 1           " show current line's diag in cmdline
 " or, instead of echo, a floating window on hover:
 " let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_echo_cursor = 1
 
 
 let g:formatdef_custom_c = '"astyle --mode=c --style=linux --align-pointer=name"'
