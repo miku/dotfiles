@@ -6,4 +6,4 @@
 [[ -d "$HOME/opt/pig/bin" ]] && export PATH=$HOME/opt/pig/bin:$PATH
 [[ -d "$HOME/code/ggml-org/llama.cpp/build/bin" ]] && export PATH=$HOME/code/ggml-org/llama.cpp/build/bin/:$PATH
 [[ -d "$HOME/.npm-packages/bin/" ]] && export PATH=$PATH:$HOME/.npm-packages/bin
-[[ -d "$HOME/.nix-profile/bin/" ]] && export PATH=$PATH:$HOME/.nix-profiles/bin
+[[ -d "$HOME/.nix-profile/bin/" ]] && export PATH=$PATH:$HOME/.nix-profile/bin
