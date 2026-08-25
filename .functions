@@ -88,13 +88,17 @@ function worldclock() {
         echo "San Francisco      $SAN_FRANCISCO"
 }
 
-function ytmp3() {
-        hash yt-dlp 2>/dev/null || {
-                echo >&2 "yt-dlp required"
-                exit 1
-        }
-        yt-dlp -x --audio-format mp3 --remote-components ejs:github "$1"
-}
+function ytmp3()
+   {
+       hash yt-dlp 2> /dev/null || {
+           echo "yt-dlp required" 1>&2;
+           exit 1
+       };
+       local url="$1";
+       shift;
+       yt-dlp -x --audio-format mp3 --remote-components ejs:github "$url" "$@"
+   }
+
 
 # jarexe turns a jar file into an single executable
 function jarexe() {
