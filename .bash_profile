@@ -67,7 +67,7 @@ command -v pyenv &>/dev/null
 
 # pandoc completion
 command -v pandoc &>/dev/null
-[[ $? -eq 0 ]] && eval "$(pandoc --bash-completion)"
+[[ $? -eq 0 ]] && eval "$(pandoc --completion=bash)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
